@@ -1,8 +1,0 @@
-title: Campaign
-data:
-  campaign_start_date: '2023-08-09'
-  campaign_end_date: '2023-08-22'
-  donors: 6
-  donations: 4015
-  housing_hope_logo:
-    - primary/housing_hope_stacked_pinnacle.png
