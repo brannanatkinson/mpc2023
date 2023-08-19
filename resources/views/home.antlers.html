@@ -21,7 +21,7 @@
             </a></li>
             {{ if now | is_between( campaign:campaign_start_date, campaign:campaign_end_date ) }} 
                 {{ nav:main }}
-                    <li><a href="{{ url }}" class=" {{ is_current ?= 'font-bold' }}">hh-{{ title }}</a></li>
+                    <li><a href="{{ url }}" class=" {{ is_current ?= 'font-bold' }}">{{ title }}</a></li>
                 {{ /nav:main }}
             {{ else }}
                 {{ nav:before_after }}
