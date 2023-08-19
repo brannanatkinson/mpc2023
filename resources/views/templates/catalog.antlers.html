@@ -1,0 +1,217 @@
+<!-- New Beginnings Category -->
+    
+    <div class="catalog-odd-row ">
+        <div class="container max-w-7xl mx-auto lg:px-0 mt-8 ">
+            <div class="text-center uppercase tracking-widest">category</div>
+            {{ taxonomy:items title:contains="Beginnings" }}
+                <div class="mb-4 text-4xl text-center font-display text-mp-blue-green">
+                {{ title }}
+                </div>
+                <div class="mb-8 max-w-4xl mx-auto">
+                {{ if description }}
+                    {{ description}}
+                {{ /if }}
+                </div>
+            {{ /taxonomy:items }}
+            
+            <div class="grid grid-col-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-4">
+                {{ collection:items taxonomy:items="new-beginnings" sort="order" }}
+                <div class="flex flex-col overflow-hidden ">
+                    <div class="mb-4">
+                        <a href="{{ url }}">
+                            {{ featured_image }}
+                                <img src="{{ url }}" alt="">
+                            {{ /featured_image }}
+                        </a>
+                    </div>
+                    <div class="h-8 text-center">
+                    {{ if item_sponsor }}
+                    {{ item_sponsor }}
+                    <div class="text-sm"><i class="fa fa-trophy text-mp-light-lime mb-4"></i> <spon class="text-mp-navy">Sponsor match doubles your gift!</spon></div>
+                    {{ /item_sponsor }}
+                    {{ /if }}
+                    </div>
+                    <!-- <div class="h-6 text-center text-sm">
+                        @if ( $item->sponsor_id != null AND $item->sponsor->matchProgress() < 100 )
+                            <i class="fa fa-trophy pr-4 text-mp-light-lime "></i><spon class="text-mp-navy">Sponsor Match Doubles Your Gift</spon>
+                        @endif 
+                    </div> -->
+                    <div class="mb-2 md:h-16 text-2xl ">
+                        {{ title }}
+                    </div>
+                    <div class="mb-4 md:flex-grow">
+                        {{ excerpt }}
+                    </div>
+
+                    <div class="mb-4 text-3xl">${{ price | format_number(2, '.', ',')}}</div>
+                    
+                    <div class="justify-self-end mb-8">
+                        <a href="{{ url }}"><button class="px-4 py-4 text-white bg-mp-blue-green">Details</button></a>
+                    </div>
+                </div>
+                {{ /collection:items }}
+            </div>
+        </div>
+
+    </div>
+
+<div class="bg-mp-blue-green">
+    <div class="max-w-5xl mx-auto py-16 space-y-4">
+        <div class="text-center text-white text-mp-blue text-3xl font-display">{{ donation_header }}</div>
+        <p class="text-center text-xl text-white">{{ donation_subhead }}</p>
+        <div class="text-center">
+            <a href="https://maryparrish.kindful.com/" target="_blank"><button class="px-4 py-3 hover:bg-white bg-mp-light-lime text-mp-navy rounded-full mx-auto">Visit our Donation Page</a>
+        </div>
+    </div>
+</div>
+
+<!-- Back to School & Work Category -->
+    <div class="catalog-even-row ">
+        <div class="container max-w-7xl mx-auto lg:px-0 mt-8 ">
+            <div class="text-center uppercase tracking-widest">category</div>
+            <div class="mb-4 text-4xl text-center font-display text-mp-blue-green">
+            {{ taxonomy:items title:contains="Back to School" }}
+                {{ title }}
+            </div>
+                <div class="mb-8 max-w-4xl mx-auto">
+                {{ if description }}
+                    {{ description}}
+                {{ /if }}
+            </div>
+            {{ /taxonomy:items }}
+        
+        
+            <div class="grid grid-col-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-4">
+                {{ collection:items taxonomy:items="back-to-school-work" sort="order" }}
+
+                <div class="flex flex-col overflow-hidden rounded-md">
+                    <div class="mb-4">
+                        <a href="{{ url }}">
+                            {{ featured_image }}
+                                <img src="{{ url }}" alt="">
+                            {{ /featured_image }}
+                        </a>
+                    </div>
+                    <!-- <div class="h-6 text-center text-sm">
+                        @if ( $item->sponsor_id != null AND $item->sponsor->matchProgress() < 100 )
+                            <i class="fa fa-trophy pr-4 text-mp-light-lime "></i><spon class="text-mp-navy">Sponsor Match Doubles Your Gift</spon>
+                        @endif 
+                    </div> -->
+                    <div class="mb-2 md:h-16 text-2xl ">
+                        {{ title }}
+                    </div>
+                    <div class="mb-4 md:flex-grow">
+                        {{ excerpt }}
+                    </div>
+                    <div class="mb-4 text-3xl">${{ price | format_number(2, '.', ',')}}</div>
+                    
+                    <div class="justify-self-end mb-8">
+                        <a href="{{ url }}"><button class="px-4 py-4 text-white bg-mp-blue-green">Details</button></a>
+                    </div>
+                </div>
+                {{ /collection:items }}
+            </div>
+        </div>
+    </div>  
+
+<!-- Going Places Category -->
+    <div class="catalog-odd-row ">
+        <div class="container max-w-7xl mx-auto lg:px-0 mt-8 ">
+            <div class="text-center uppercase tracking-widest">category</div>
+            <div class="mb-4 text-4xl text-center font-display text-mp-blue-green">
+            {{ taxonomy:items title:contains="Going Places" }}
+                {{ title }}
+            </div>
+                <div class="mb-8 max-w-4xl mx-auto">
+                {{ if description }}
+                    {{ description}}
+                {{ /if }}
+            </div>
+            {{ /taxonomy:items }}
+        
+        
+            <div class="grid grid-col-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-4">
+                {{ collection:items taxonomy:items="going-places" sort="order" }}
+
+                <div class="flex flex-col overflow-hidden rounded-md">
+                    <div class="mb-4">
+                        <a href="{{ url }}">
+                            {{ featured_image }}
+                                <img src="{{ url }}" alt="">
+                            {{ /featured_image }}
+                        </a>
+                    </div>
+                    <!-- <div class="h-6 text-center text-sm">
+                        @if ( $item->sponsor_id != null AND $item->sponsor->matchProgress() < 100 )
+                            <i class="fa fa-trophy pr-4 text-mp-light-lime "></i><spon class="text-mp-navy">Sponsor Match Doubles Your Gift</spon>
+                        @endif 
+                    </div> -->
+                    <div class="mb-2 md:h-16 text-2xl ">
+                        {{ title }}
+                    </div>
+                    <div class="mb-4 md:flex-grow">
+                        {{ excerpt }}
+                    </div>
+                    <div class="mb-4 text-3xl">${{ price | format_number(2, '.', ',')}}</div>
+                    
+                    <div class="justify-self-end mb-8">
+                        <a href="{{ url }}"><button class="px-4 py-4 text-white bg-mp-blue-green">Details</button></a>
+                    </div>
+                </div>
+                {{ /collection:items }}
+            </div>
+        </div>
+    </div> 
+
+<!-- Healing & Housing Category -->
+    <div class="catalog-even-row ">
+        <div class="container max-w-7xl mx-auto lg:px-0 mt-8 ">
+            <div class="text-center uppercase tracking-widest">category</div>
+            <div class="mb-4 text-4xl text-center font-display text-mp-blue-green">
+            {{ taxonomy:items title:contains="Healing" }}
+                {{ title }}
+            </div>
+                <div class="mb-8 max-w-4xl mx-auto">
+                {{ if description }}
+                    {{ description}}
+                {{ /if }}
+            </div>
+            {{ /taxonomy:items }}
+        
+        
+            <div class="grid grid-col-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-4">
+                {{ collection:items taxonomy:items="healing-housing" sort="order" }}
+
+                <div class="flex flex-col overflow-hidden rounded-md">
+                    <div class="mb-4">
+                        <a href="{{ url }}">
+                            {{ featured_image }}
+                                <img src="{{ url }}" alt="">
+                            {{ /featured_image }}
+                        </a>
+                    </div>
+                    <!-- <div class="h-6 text-center text-sm">
+                        @if ( $item->sponsor_id != null AND $item->sponsor->matchProgress() < 100 )
+                            <i class="fa fa-trophy pr-4 text-mp-light-lime "></i><spon class="text-mp-navy">Sponsor Match Doubles Your Gift</spon>
+                        @endif 
+                    </div> -->
+                    <div class="mb-2 md:h-16 text-2xl ">
+                        {{ title }}
+                    </div>
+                    <div class="mb-4 md:flex-grow">
+                        {{ excerpt }}
+                    </div>
+                    <div class="mb-4 text-3xl">${{ price | format_number(2, '.', ',')}}</div>
+                    
+                    <div class="justify-self-end mb-8">
+                        <a href="{{ url }}"><button class="px-4 py-4 text-white bg-mp-blue-green">Details</button></a>
+                    </div>
+                </div>
+                {{ /collection:items }}
+            </div>
+        </div>
+    </div> 
+           
+            
+            
+       

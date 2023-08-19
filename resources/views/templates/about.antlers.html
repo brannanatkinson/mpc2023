@@ -1,0 +1,59 @@
+<div class=" block mb-8 ">
+    {{ featured_image }}
+    <img src="{{ url }}" alt="" class="h-96 w-full object-cover">
+    {{ /featured_image }}
+</div>
+<div class="container mx-auto">
+    {{ livewire:results }}
+</div>
+<div class="container mx-auto pb-8">
+    <div class="pt-8 pb-4 text-4xl text-mp-blue-green font-display text-center">{{ page_header }}</div>
+    <div class="px-4 w-full text-xl lg:w-3/5 mx-auto">
+        {{ content }}
+    </div>
+</div>
+<div class="bg-mp-blue-green py-8 text-white">
+    <div class="container mx-auto ">
+        <div class="px-4 mx-auto">
+            <div class="pt-8 pb-8 text-3xl font-display text-center">{{ supporters }}</div>
+            <div class="text-xl text-center">{{ supporters_subhead }}</div>
+            <div class="flex flex-col justify-center lg:flex-row lg:flex-wrap">
+                <div class="pb-8">
+                    <p class="mt-6 mb-3 text-2xl text-mp-navy font-display text-center">2023 Events Hosts</p>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+
+<div class="container mx-auto pb-12">
+    <div class="px-4 lg:w-3/5 mx-auto">
+        
+        <div class="pt-12">
+            <img src="http://mpc23.test/storage/primary/mp_green_logo.png" class="mx-auto w-48 mb-8" alt="">
+        </div>
+        <div class="pt-4 pb-4 text-3xl font-display text-center">{{ about_header}}</div>
+        <p class="mb-4 text-xl text-center text-mp-blue-green"><a href="https://www.maryparrish.org" >www.MaryParrish.org</a></p>
+        <div class="mb-6 text-xl">{{ about_text }}</div>    
+    </div>
+
+</div>
+{{ if now | is_between( campaign:campaign_start_date, campaign:campaign_end_date ) }} 
+<div class="mb-16 max-w-4xl mx-auto">
+    <div class="mb-8 text-3xl font-display text-center">Frequently Asked Questions</div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 px-6 lg:px-0">
+        {{ faq }}
+        <div>
+            <div class="mb-4 text-2xl font-display text-mp-blue-green italic">
+                {{ faq_question }}
+            </div>
+            <div class="text-xl">
+                {{ faq_answer }}
+            </div>
+        </div>
+        {{ /faq }}
+    </div>
+</div>
+{{ /if }}
+
