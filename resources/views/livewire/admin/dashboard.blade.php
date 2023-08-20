@@ -53,7 +53,22 @@
             </div>
             
             <div class="mb-6 grid grid-cols-4 gap-6">
-                {{ $test }}
+                @foreach ( $gift_items as $item )
+                    <div class="bg-white text-center flex flex-col rounded-md overflow-hidden">
+                        <div class="mb-6 w-full">
+                            <img src="{{ $item->featured_image[0]['path']}}" alt="" class="object-fit">
+                        </div>
+                        <div class="mb-4 text-3xl">
+                            0
+                        </div>
+                        <div class="mb-8 text-sm">
+                            @if ( count( $item->item_sponsor ) )
+                            {{ $item->item_sponsor[0]['title'] }}
+                            @endif
+                        </div>
+                    </div>
+                    
+                @endforeach
             </div>
         </div>
         <div class="pb-16 max-w-5xl mx-auto">

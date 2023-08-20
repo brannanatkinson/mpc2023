@@ -8,11 +8,12 @@ use Statamic\Facades\Entry;
 class Dashboard extends Component
 {
     public $test;
+    public $gift_items;
 
     public function mount()
     {
-        $this->test = 'brannan';
-        //$this->gift_items = Entry::query()->where('collection','items')->get();
+        //$this->test = 'brannan';
+        $this->gift_items = Entry::query()->where('collection','items')->get();
     }
     public function render()
     {
