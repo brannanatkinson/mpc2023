@@ -5,6 +5,7 @@ namespace App\Http\Livewire\Admin\Hosts;
 use Livewire\Component;
 use App\Models\Host;
 use App\Models\User;
+use App\Models\Campaign;
 use App\Models\UserMeta;
 use App\Mail\NewHost;
 use Illuminate\Support\Facades\Mail;
@@ -52,6 +53,8 @@ class AllHosts extends Component
         ]);
         $user->assignRole('host');
         $user->givePermissionTo('edit host');
+        $year = date('Y');
+        $user->campaigns()->attach( Campaign::where('year', '=', $year)->get() );
         $userMeta = UserMeta::create([
             'user_id' => $user->id,
         ]);
@@ -66,5 +69,9 @@ class AllHosts extends Component
     {
         $user = User::where('id', '=', $id)->first();
         Mail::to( $user->email )->send(new NewHost( $user ));
+        $year = date('Y');
+        $user->campaigns()->attach( Campaign::where('year', '=', $year)->get() );
+        $this->mount();
+
     }
 }

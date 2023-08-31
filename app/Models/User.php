@@ -68,9 +68,15 @@ class User extends Authenticatable
     public function UserMeta(){
         return $this->hasOne(UserMeta::class);
     }
+
     public function items()
     {
         return $this->belongsToMany(Item::class)->withPivot(['item_quantity']);
+    }
+
+    public function campaigns()
+    {
+        return $this->belongsToMany(Campaign::class)->orderBy('year');
     }
 
     public function totalDonationAmount()

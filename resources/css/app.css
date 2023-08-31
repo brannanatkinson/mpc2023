@@ -15,6 +15,7 @@
   p { 
     @apply mb-4
   }
+  
 }
 
 @layer utilities{
@@ -23,6 +24,32 @@
   }
   .catalog-even-row {
     @apply py-16 bg-white
+  }
+  .resp-table {
+    width: 100%;
+    display: table;
+  }
+  .resp-table-header{
+    display: table-header-group;
+    @apply bg-mp-light-lime;
+    font-weight: bold;
+  }
+  .table-header-cell{
+    display: table-cell;
+    padding: 10px;
+    text-align: justify;
+    border-bottom: 1px solid black;
+  }
+  .resp-table-body{
+    display: table-row-group;
+  }
+  .resp-table-row{
+    display: table-row;
+    border-bottom: 4px;
+  }
+  .table-body-cell{
+    display: table-cell;
+    @apply py-4;
   }
 }
 
