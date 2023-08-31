@@ -59,7 +59,7 @@
                     @if ( $host->campaigns->last()->year != date("Y") )
                         <div wire:click.prevent="sendInviteEmail( {{ $host->id }} )" class="inline-block px-6 py-2 bg-mp-coral text-white rounded-full">Send invite link</div>
                     @else
-                        <div wire:click.prevent="sendInviteEmail( {{ $host->id }} )" class="inline-block px-6 py-2 bg-mp-navy text-white rounded-full">Resend invite link</div>
+                        <div wire:click.prevent="resendInviteEmail( {{ $host->id }} )" class="inline-block px-6 py-2 bg-mp-navy text-white rounded-full">Resend invite link</div>
                     @endif 
                     </div>
                     <div class="table-body-cell">

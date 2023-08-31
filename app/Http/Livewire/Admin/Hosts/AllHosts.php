@@ -74,4 +74,11 @@ class AllHosts extends Component
         $this->mount();
 
     }
+    public function resendInviteEmail( $id )
+    {
+        $user = User::where('id', '=', $id)->first();
+        Mail::to( $user->email )->send(new NewHost( $user ));
+        $this->mount();
+
+    }
 }
