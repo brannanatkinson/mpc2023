@@ -109,7 +109,7 @@
                         Total Raised
                     </div>
                     <div class="mb-8 text-4xl font-bold">
-                        ${{ App\Models\Gift::where('user_id', '=', auth()->user()->id )->sum('gift_total') }}
+                        ${{ App\Models\Gift::where('user_id', '=', auth()->user()->id )->where('created_at', '>', '2023-01-01')->sum('gift_total') }}
                     </div>
                  </div>
                 <div class="p-8 text-center bg-gray-200 rounded-md flex flex-col justify-center items-center">
@@ -117,7 +117,7 @@
                         Total Gifts
                     </div>
                     <div class="mb-8 text-4xl font-bold">
-                        {{ App\Models\Gift::where('user_id', '=', auth()->user()->id )->count() }}
+                        {{ App\Models\Gift::where('user_id', '=', auth()->user()->id )->where('created_at', '>', '2023-01-01')->count() }}
                     </div>
                 </div>
                 <div class="p-8 text-center bg-gray-200 rounded-md flex flex-col justify-center items-center">
