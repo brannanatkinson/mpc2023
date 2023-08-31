@@ -50,7 +50,7 @@
                     </div>
                     <div class="table-body-cell">
                         @foreach ( $host->campaigns as $campaign)
-                            <div class="inline-block px-6 py-2 bg-mp-blue-green text-white rounded-full">
+                            <div class="inline-block text-sm px-6 py-2 bg-mp-blue-green text-white rounded-full">
                                 {{ $campaign->year }}
                             </div>
                         @endforeach
