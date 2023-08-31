@@ -81,7 +81,7 @@
                 <div class=" font-bold">Credited Host</div>
                 <!-- add purchase date  -->
                 <div class=""></div>
-                @foreach( App\Models\Gift::orderBy('gift_total', 'DESC')->get() as $gift )
+                @foreach( App\Models\Gift::orderBy('gift_total', 'DESC')->where('created_at', '>', '2023-01-01')->get() as $gift )
                 <div class=" col-span-2">{{ $gift->donor->full_name }}</div>
                 <div class="">${{ $gift->gift_total }}</div>
                 <div class="">
@@ -125,14 +125,14 @@
                         Total Donors
                     </div>
                     <div class="mb-8 text-4xl font-bold">
-                        {{ App\Models\Gift::where('user_id', '=', auth()->user()->id )->count('donor_id') }}
+                        {{ App\Models\Gift::where('user_id', '=', auth()->user()->id )->where('created_at', '>', '2023-01-01')->count('donor_id') }}
                     </div>
                  </div>
             </div>
             @php
                 $user = auth()->user();
                 if ( $user->UserMeta->goal != null ){
-                    $hostGoalProgress = ( App\Models\Gift::where('user_id', '=', $user->id )->sum('gift_total') / $user->UserMeta->goal ) * 100;
+                    $hostGoalProgress = ( App\Models\Gift::where('user_id', '=', $user->id )->where('created_at', '>', '2023-01-01')->sum('gift_total') / $user->UserMeta->goal ) * 100;
                 }
             @endphp 
             @if ( $user->UserMeta->goal != null )
@@ -148,7 +148,8 @@
             </div>
             @endif
         </div>
-        <div class="mt-10 max-w-5xl mx-auto">
+        <!-- commented out items -->
+        <!-- <div class="mt-10 max-w-5xl mx-auto">
             <div class="my-3 text-3xl">Items Donated</div>
             @if( $user->donatedItems()->count() > 0 )
             <div class="mb-6 grid grid-cols-4 gap-6">
@@ -162,7 +163,7 @@
                 @endforeach
             </div>
             @endif
-        </div>
+        </div> -->
         <div class="mt-10 max-w-5xl mx-auto">
             <div class="my-3 text-3xl">
                 @php echo date("Y") @endphp Donor Summary
@@ -171,7 +172,7 @@
                 <div class="font-bold">Donor Name</div>
                 <div class="font-bold">Amount </div>
                  <div class="font-bold">Items </div>
-                @foreach( App\Models\Gift::where('user_id', '=', auth()->user()->id )->get() as $gift )
+                @foreach( App\Models\Gift::where('user_id', '=', auth()->user()->id )->where('created_at', '>', '2023-01-01')->get() as $gift )
                 <div class="">{{ $gift->donor->full_name }}</div>
                 <div class="">${{ $gift->gift_total }} </div>
                 <div class="">{{ $gift->items->sum('pivot.item_quantity') }}</div>
