@@ -25,10 +25,10 @@
                 Name
                 </div>
                 <div class="table-header-cell">
-                Campaigns
+                Invitation
                 </div>
                 <div class="table-header-cell">
-                Invitation
+                Campaigns
                 </div>
                 <div class="table-header-cell">
                 @php echo date("Y") @endphp Results
@@ -44,13 +44,20 @@
                 @endphp
                 <div class="resp-table-row ">
                     <div class="table-body-cell">
-                    <div class="text-xl -mb-6">{{ $host->name}} 
-                        @if ( $host->campaigns->last()->year == date('Y'))
-                            <i class="fa fa-heart text-mp-blue-green"></i>
-                        @endif
-                    </div> 
-                    <br/>
-                    {{ $host->email}}
+                        <div class="text-xl -mb-6">{{ $host->name}} 
+                            @if ( $host->campaigns->last()->year == date('Y'))
+                                <i class="fa fa-heart text-mp-blue-green"></i>
+                            @endif
+                        </div> 
+                        <br/>
+                        {{ $host->email}}
+                    </div>
+                    <div class="table-body-cell">
+                        @if ( $host->campaigns->last()->year != date("Y") )
+                            <div wire:click.prevent="sendInviteEmail( {{ $host->id }} )" class="inline-block px-6 py-2 bg-mp-coral text-white rounded-full">Send invite link</div>
+                        @else
+                            <div wire:click.prevent="resendInviteEmail( {{ $host->id }} )" class="inline-block px-6 py-2 bg-mp-navy text-white rounded-full">Resend invite link</div>
+                        @endif 
                     </div>
                     <div class="table-body-cell">
                         @foreach ( $host->campaigns as $campaign)
@@ -65,13 +72,7 @@
                             @endif
                         @endforeach
                     </div>
-                    <div class="table-body-cell">
-                    @if ( $host->campaigns->last()->year != date("Y") )
-                        <div wire:click.prevent="sendInviteEmail( {{ $host->id }} )" class="inline-block px-6 py-2 bg-mp-coral text-white rounded-full">Send invite link</div>
-                    @else
-                        <div wire:click.prevent="resendInviteEmail( {{ $host->id }} )" class="inline-block px-6 py-2 bg-mp-navy text-white rounded-full">Resend invite link</div>
-                    @endif 
-                    </div>
+                    
                     <div class="table-body-cell">
                     
                     </div>
