@@ -44,15 +44,25 @@
                 @endphp
                 <div class="resp-table-row ">
                     <div class="table-body-cell">
-                    <div class="text-xl -mb-6">{{ $host->name}} </div>
+                    <div class="text-xl -mb-6">{{ $host->name}} 
+                        @if ( $host->campaigns->last()->year = date('Y'))
+                            <i class="fa fa-heart text-mp-blue-green"></i>
+                        @endif
+                    </div> 
                     <br/>
                     {{ $host->email}}
                     </div>
                     <div class="table-body-cell">
                         @foreach ( $host->campaigns as $campaign)
-                            <div class="inline-block text-sm px-6 py-2 bg-mp-blue-green text-white rounded-full">
-                                {{ $campaign->year }}
-                            </div>
+                            @if ( $campaign->year == date('Y'))
+                                <div class="inline-block text-sm px-6 py-2 bg-mp-navy text-white rounded-full">
+                                    {{ $campaign->year }}
+                                </div>
+                            @else
+                                <div class="inline-block text-sm px-6 py-2 bg-mp-light-lime text-white rounded-full">
+                                    {{ $campaign->year }}
+                                </div>
+                            @endif
                         @endforeach
                     </div>
                     <div class="table-body-cell">
