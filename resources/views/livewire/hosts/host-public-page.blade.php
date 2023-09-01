@@ -71,7 +71,7 @@
     </div>
     <div id="mpc" class="bg-mp-coral py-16">
         <div class="container mx-auto px-4 lg:px-0">
-            <img src="/storage/logos/mp_green_logo.png" class="mx-auto w-64 mb-8" alt="">
+            <img src="/storage/primary/mp_green_logo.png" class="mx-auto w-64 mb-8" alt="">
             <div class="mb-4 text-3xl lg:text-4xl text-center text-navy font-display italic leading-tight">About The Mary Parrish Center</div>
             <p class="mb-12 max-w-4xl mx-auto text-xl lg:text-2xl text-white text-center leading-tight">The Mary Parrish Center provides vital services that help survivors through <b>the stages of
                         rebuilding</b> their lives following interpersonal violence.</p>
