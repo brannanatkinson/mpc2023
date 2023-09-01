@@ -45,7 +45,7 @@
                 <div class="resp-table-row ">
                     <div class="table-body-cell">
                     <div class="text-xl -mb-6">{{ $host->name}} 
-                        @if ( $host->campaigns->last()->year = date('Y'))
+                        @if ( $host->campaigns->last()->year == date('Y'))
                             <i class="fa fa-heart text-mp-blue-green"></i>
                         @endif
                     </div> 
