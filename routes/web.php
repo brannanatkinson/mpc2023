@@ -7,6 +7,7 @@ use App\Http\Livewire\Admin\Hosts\UpdateHostForm;
 use App\Http\Livewire\Hosts\HostPublicPage;
 use App\Http\Livewire\WebhookConfirmation;
 use App\Http\Livewire\OrderConfirmation;
+use App\Http\Controllers\DbApi;
 
 
 /*
@@ -41,6 +42,8 @@ Route::get('/hosts/{url}', HostPublicPage::class);
 
 Route::post('/webhook', WebhookConfirmation::class);
 Route::get('/thankyou/{order_token}', OrderConfirmation::class);
+
+Route::get('/taxonomies', [DbApi::class, 'taxonomies']);
 
 
 
