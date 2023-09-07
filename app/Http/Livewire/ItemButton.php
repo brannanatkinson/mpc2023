@@ -19,7 +19,7 @@ class ItemButton extends Component
     | Get ID from
     |
     */
-    public $itemName = "Brannan";
+    public $itemName;
     public $itemId;
     public $itemExcept;
     public $itemHosts;
