@@ -4,7 +4,7 @@
     </x-slot>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Housing Hope 2022 Dashboard') }}
+            {{ __('Housing Hope 2023 Dashboard') }}
         </h2>
     </x-slot>
     
@@ -50,16 +50,21 @@
             2022 Giving Catalog Item Summary
         </div>
         <div class="mb-6 grid grid-cols-1 md:grid-cols-4 gap-6 px-6 md:py-0">
-            @foreach ( App\Models\Item::all() as $item )
+            @foreach ( $gift_items as $item )
                 <div class="bg-white text-center flex flex-col rounded-md overflow-hidden">
                     <div class="mb-6 w-full">
                         <img src="{{ Storage::url( App\Models\Item::find( $item->id )->img ) }}" alt="" class="object-fit">
                     </div>
                     <div class="mb-4 text-3xl">
-                        {{ $item->sales()->count() > 0 ? $item->sales()->first()->quantity : 0 }}
+                        @if ( $item->id != null )
+                            {{ App\Models\Item::where('statamic_id', $item->id)->first()->sales()->count() > 0 ? App\Models\Item::where('statamic_id', $item->id)->first()->sales()->first()->quantity : 0 }}
+                        @endif
                     </div>
                     <div class="mb-8 text-sm">
-                        {{ $item->sponsor ? $item->sponsor->name : '' }}<br>
+                        @if ( count( $item->item_sponsor ) )
+                            {{ $item->item_sponsor[0]['title'] }}
+                        @endif
+                        <br>
                     </div>
                 </div>
                 
@@ -76,7 +81,7 @@
             <div class=" font-bold">Credited Host</div>
             <!-- add purchase date  -->
             <div class=""></div>
-            @foreach( App\Models\Gift::orderBy('gift_total', 'DESC')->get() as $gift )
+            @foreach( App\Models\Gift::orderBy('gift_total', 'DESC')->where('created_at', '>', '2023-01-01')->get() as $gift )
             <div class=" col-span-2">{{ $gift->donor->full_name }}</div>
             <div class="">${{ $gift->gift_total }}</div>
             <div class="">
