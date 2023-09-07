@@ -94,6 +94,16 @@
             <!-- 
             ** Results
             -->
+            {{ if now | is_between( campaign:campaign_start_date, campaign:campaign_end_date ) }}
+                <div class="container py-16 max-w-5xl mx-auto">
+                    <div class="mt-8 mb-4 text-4xl font-display leading-tight text-mp-blue-green  text-center">
+                        Housing Hope 2023 Live Results
+                    </div>
+                    <div class="mb-8">
+                         {{ livewire:results }}
+                    </div>
+                </div>
+            {{ /if }}
             {{ if now | is_after( campaign:campaign_end_date ) }} 
                                 
                 <div class="container py-16 max-w-5xl mx-auto">
