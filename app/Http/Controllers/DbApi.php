@@ -18,7 +18,7 @@ class DbApi extends Controller
         |--------------------------------------------------------------------------
         |
         */
-        $response = Http::get('http://mpc23.test/api/taxonomies/items/terms');
+        $response = Http::get(env('APP_URL').'/api/taxonomies/items/terms');
         $result = json_decode($response);
         $terms = '';
         foreach( $result->data as $term){
@@ -40,7 +40,7 @@ class DbApi extends Controller
         | Gets Items collection from Statamic and pushes updates to DB
         |
         */
-        $response = Http::get('http://mpc23.test/api/collections/items/entries');
+        $response = Http::get(env('APP_URL').'/api/collections/items/entries');
         $result = json_decode($response);
         foreach( $result->data as $item){
             $item = Item::updateOrCreate(
@@ -64,7 +64,7 @@ class DbApi extends Controller
         | Gets Sponsors Collection and pushes updates to DB
         |
         */    
-        $response = Http::get('http://mpc23.test/api/collections/sponsors/entries');
+        $response = Http::get(env('APP_URL').'/api/collections/sponsors/entries');
         $result = json_decode($response);
         foreach( $result->data as $sponsor){
             $sponsor = Sponsor::updateOrCreate(
@@ -87,7 +87,7 @@ class DbApi extends Controller
         | Sponsor id and adds it to the sponsor_id in Items
         |
         */    
-        $response = Http::get('http://mpc23.test/api/collections/items/entries');
+        $response = Http::get(env('APP_URL').'/api/collections/items/entries');
         $result = json_decode($response);
         $items_dd = [];
         foreach( $result->data as $item){
