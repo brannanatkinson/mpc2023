@@ -14,7 +14,7 @@ class Item extends Model
 
     public function gifts()
     {
-        return $this->belongsToMany(Gitt::class);
+        return $this->belongsToMany(Gitt::class)->withTimestamps();
     }
 
     public function category(){
@@ -23,7 +23,7 @@ class Item extends Model
 
     public function hosts()
     {
-        return $this->belongsToMany(Host::class)->withPivot(['item_quantity']);
+        return $this->belongsToMany(Host::class)->withPivot(['item_quantity'])->withTimestamps();
     }
 
     public function sponsor()

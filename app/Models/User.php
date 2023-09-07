@@ -71,7 +71,7 @@ class User extends Authenticatable
 
     public function items()
     {
-        return $this->belongsToMany(Item::class)->withPivot(['item_quantity']);
+        return $this->belongsToMany(Item::class)->withPivot(['item_quantity'])->withTimestamps();
     }
 
     public function campaigns()
