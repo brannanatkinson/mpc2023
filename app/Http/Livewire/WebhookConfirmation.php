@@ -34,7 +34,7 @@ class WebhookConfirmation extends Component
         
         // check if event host credited
 
-        if ( $this->result['content']['items'][0]['customFields'][0]['value'] != '--' ) {
+        if ( Regex::isAlpha($this->result['content']['items'][0]['customFields'][0]['value']) == false ) {
             $userId = User::where('name', $this->result['content']['items'][0]['customFields'][0]['value'])->first()->id;
         } else {
             $userId = null;
