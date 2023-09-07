@@ -61,25 +61,27 @@
             <div class="py-16">
                 
             </div>
+        </div>
             
-            <div class="mb-6 grid grid-cols-4 gap-6">
-                @foreach ( $gift_items as $item )
-                    <div class="bg-white text-center flex flex-col rounded-md overflow-hidden">
-                        <div class="mb-6 w-full">
-                            <img src="/storage/{{ $item->featured_image[0]['path']}}" alt="" class="object-fit">
-                        </div>
-                        <div class="mb-4 text-3xl">
-                            
-                            {{ $item->statamic_id }}
-
-                        </div>
-                        <div class="mb-8 text-sm">
-                            @if ( count( $item->item_sponsor ) )
-                            {{ $item->item_sponsor }}
-                            @endif
-                        </div>
-                    </div>
-                    
+        <div class="pb-16 max-w-5xl mx-auto">
+            <div class="mt-8 mb-6 text-3xl font-bold">
+                @php echo date("Y") @endphp Gift Summary
+            </div>
+            <div class="grid grid-cols-5 gap-4">
+                <div class=" col-span-2 font-bold">Donor</div>
+                <div class=" font-bold">Amount</div>
+                <div class=" font-bold">Credited Host</div>
+                <!-- add purchase date  -->
+                <div class=""></div>
+                @foreach( App\Models\Gift::orderBy('gift_total', 'DESC')->where('created_at', '>', '2023-01-01')->get() as $gift )
+                <div class=" col-span-2">{{ $gift->donor->full_name }}</div>
+                <div class="">${{ $gift->gift_total }}</div>
+                <div class="">
+                    @if ( $gift->user_id != null )
+                        {{ App\Models\User::where('id' , '=', $gift->user_id )->first()->name }}
+                    @endif
+                </div>
+                <div class=""></div>
                 @endforeach
             </div>
         </div>
