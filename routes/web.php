@@ -27,9 +27,7 @@ use Illuminate\Support\Facades\Http;
 // });
 
 Route::statamic('uri', 'view');
-Route::get('/givingwall', function(){
-    return view('wall');
-});
+
 
 Route::middleware([
     'auth:sanctum',
