@@ -13,7 +13,7 @@ class Dashboard extends Component
     public function mount()
     {
         //$this->test = 'brannan';
-        $this->gift_items = Entry::query()->where('collection','items')->get();
+        $this->gift_items = Entry::query()->where('collection','items')->where('status', 'published')->get();
     }
     public function render()
     {
