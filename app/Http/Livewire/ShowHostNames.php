@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use Illuminate\Database\Eloquent\Builder;
+use App\Models\User;
 
 
 class ShowHostNames extends Component
