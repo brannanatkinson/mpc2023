@@ -71,9 +71,7 @@
                         </div>
                         <div class="mb-4 text-3xl">
                             {{ $item->id }}
-                            <!-- @if ( $item->id != null )
-                                {{ App\Models\Item::where('statamic_id', $item->id)->first()->sales()->count() > 0 ? App\Models\Item::where('statamic_id', $item->id)->first()->sales()->first()->quantity : 0 }}
-                            @endif -->
+                            
 
                         </div>
                         <div class="mb-8 text-sm">
