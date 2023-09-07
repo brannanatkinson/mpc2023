@@ -66,7 +66,7 @@ class WebhookConfirmation extends Component
         }
 
         if ( $userId != null ){
-             //Mail::to( $userEmail )->send(new HostCredited($gift));
+             Mail::to( $userEmail )->send(new HostCredited($gift));
         }
 
     }
