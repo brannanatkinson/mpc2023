@@ -75,7 +75,7 @@
                         </div>
                         <div class="mb-8 text-sm">
                             @if ( count( $item->item_sponsor ) )
-                            {{ $item->item_sponsor[0]['title'] }}
+                            {{ $item->item_sponsor[0]->title }}
                             @endif
                         </div>
                     </div>
