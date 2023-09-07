@@ -60,7 +60,7 @@ class WebhookConfirmation extends Component
             $gift->items()->attach( [ 'item_id' => $itemIdToStore ], [ 'item_quantity' => $newItem['quantity'] ] );
             if ( $userId != null )
             {
-                User::find( $userId )->items()->attach( [ 'item_id' => $newItem['id'] ], [ 'item_quantity' => $newItem['quantity'] ] );
+                User::find( $userId )->items()->attach( [ 'item_id' => $itemIdToStore ], [ 'item_quantity' => $newItem['quantity'] ] );
                 $userEmail = User::where('name', $this->result['content']['items'][0]['customFields'][0]['value'])->first()->email;
             }    
         }
