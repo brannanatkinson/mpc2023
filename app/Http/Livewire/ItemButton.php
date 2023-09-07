@@ -40,9 +40,6 @@ class ItemButton extends Component
         $hostNames = '--|';
         this->hosts = User::permission('edit host')
             ->orderBy('name')
-            ->whereHas('campaigns', function( Builder $query){
-                $query->where('year', '=', date('Y'));
-            })
             ->get();
         $lastElement = $hosts->last();
         foreach ( $hosts as $host ) {
