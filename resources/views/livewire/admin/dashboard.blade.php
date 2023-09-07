@@ -29,7 +29,7 @@
                         Total Raised by Hosts
                     </div>
                     <div class="mb-8 text-4xl font-bold">
-                        ${{ App\Models\Gift::where('user_id','!=', null)->sum('gift_total') }}
+                        ${{ App\Models\Gift::where('user_id','!=', null)->where('created_at', '>', '2023-01-01')->sum('gift_total') }}
                     </div>
                  </div>
                  <div class="p-8 text-center bg-gray-200 rounded-md flex flex-col justify-center items-center">
@@ -37,7 +37,7 @@
                         Total Gifts by Hosts
                     </div>
                     <div class="mb-8 text-4xl font-bold">
-                        {{ App\Models\Gift::where('user_id','!=', null)->count() }}
+                        {{ App\Models\Gift::where('user_id','!=', null)->where('created_at', '>', '2023-01-01')->count() }}
                     </div>
                  </div>
                 <div><!-- blank  --></div>
@@ -47,10 +47,10 @@
                 <div class=" font-bold">Amount Raised</div>
                 <div class=" font-bold">Total Gifts</div>
                 <div class=" font-bold">Total Items</div>
-                @foreach( App\Models\User::permission('edit host')->orderBy('name')->get() as $host )
+                @foreach( $hosts as $host )
                 <div class=" col-span-2">{{ $host->name }}</div>
-                <div class="">${{ App\Models\Gift::where('user_id', '=', $host->id )->sum('gift_total') }}</div>
-                <div class="">{{ App\Models\Gift::where('user_id', '=', $host->id )->count() }}</div>
+                <div class="">${{ App\Models\Gift::where('user_id', '=', $host->id )->where('created_at', '>', '2023-01-01')->sum('gift_total') }}</div>
+                <div class="">{{ App\Models\Gift::where('user_id', '=', $host->id )->where('created_at', '>', '2023-01-01')->count() }}</div>
                 <div class="">{{ $host->items->sum('pivot.item_quantity') }}</div>
                 @endforeach
             </div>
