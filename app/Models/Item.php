@@ -10,7 +10,7 @@ class Item extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'description', 'category_id', 'sponsor_id', 'cost', 'img', 'excerpt'];
+    protected $fillable = ['statamic_id', 'name', 'description', 'category_id', 'sponsor_id', 'cost', 'img', 'excerpt'];
 
     public function gifts()
     {

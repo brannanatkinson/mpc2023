@@ -1,16 +1,33 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Console\Commands;
+
+use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Http;
 use App\Models\Category;
 use App\Models\Item;
 use App\Models\Sponsor;
 
-use Illuminate\Http\Request;
-
-class DbApi extends Controller
+class UpdateDatabase extends Command
 {
-    public function index()
+    /**
+     * The name and signature of the console command.
+     *
+     * @var string
+     */
+    protected $signature = 'app:update-database';
+
+    /**
+     * The console command description.
+     *
+     * @var string
+     */
+    protected $description = 'Copy Statamic records to database';
+
+    /**
+     * Execute the console command.
+     */
+    public function handle()
     {
         /*
         |--------------------------------------------------------------------------
@@ -109,6 +126,6 @@ class DbApi extends Controller
             }
             
         }
-        dd ( $items_dd );
+        $this->info('Successfully updated database.');
     }
 }
