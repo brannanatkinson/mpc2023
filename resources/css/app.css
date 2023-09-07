@@ -51,6 +51,15 @@
     display: table-cell;
     @apply py-4;
   }
+  @variants responsive {
+    .masonry {
+      column-gap: 1.5em;
+      column-count: 3;
+    }
+    .break-inside {
+      break-inside: avoid;
+    }
+  }
 }
 
 [x-cloak] {
