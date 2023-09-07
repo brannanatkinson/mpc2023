@@ -8,14 +8,15 @@
             <div class="mt-9 box-border md:columns-3 gap-8 before:box-inherit after:box-inherit">
                 @foreach( $donorsWithNotes as $donor )
                     @if( $donor->first() )
-                        <div class="flex flex-col items-center px-8 py-6 mb-4 bg-gray-200 rounded-lg break-inside">
-                            <div clsss="mb-8 text-center">
-                                <i class="fad fa-envelope-open fa-2x text-mp-coral"></i>
+                        <div class="block">
+                            <div class="flex flex-col items-center px-8 py-6 mb-4 bg-gray-200 rounded-lg break-inside">
+                                <div clsss="mb-8 text-center">
+                                    <i class="fad fa-envelope-open fa-2x text-mp-coral"></i>
+                                </div>
+                                <div class="mt-3">
+                                    <p class="font-display italic leading-loose">{{ $donor->note }}</p>
+                                </div>
                             </div>
-                            <div class="mt-3">
-                                <p class="font-display italic leading-loose">{{ $donor->note }}</p>
-                            </div>
-                            
                         </div>
                     @else
                         <div class="px-8 py-6 my-4 bg-gray-200 rounded-lg break-inside">
