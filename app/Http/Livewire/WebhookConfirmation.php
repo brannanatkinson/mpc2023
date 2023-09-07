@@ -56,8 +56,8 @@ class WebhookConfirmation extends Component
 
         foreach ( $this->result['content']['items'] as $newItem )
         {
-            //$itemToStore = Item::where('name', $newItem['name'])->first();
-            $gift->items()->attach( [ 'item_id' => $newItem['id'] ], [ 'item_quantity' => $newItem['quantity'] ] );
+            $itemIdToStore = Item::where('name', $newItem['name'])->first()->id;
+            $gift->items()->attach( [ 'item_id' => $itemIdToStore ], [ 'item_quantity' => $newItem['quantity'] ] );
             if ( $userId != null )
             {
                 User::find( $userId )->items()->attach( [ 'item_id' => $newItem['id'] ], [ 'item_quantity' => $newItem['quantity'] ] );
