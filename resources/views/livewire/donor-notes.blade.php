@@ -5,7 +5,7 @@
                 @php echo date('Y') @endphp Housing Donor Notes
             </div>
             <p class="text-mp-light-gray text-center text-xl">The Mary Parrish Center residents, alumni, and staff are grateful for your wonderful notes. </p>
-            <div class="mt-9 box-border md:masonry before:box-inherit after:box-inherit">
+            <div class="mt-9 box-border md:columns-3 gap-8 before:box-inherit after:box-inherit">
                 @foreach( $donorsWithNotes as $donor )
                     @if( $donor->first() )
                         <div class="flex flex-col items-center px-8 py-6 mb-4 bg-gray-200 rounded-lg break-inside">
