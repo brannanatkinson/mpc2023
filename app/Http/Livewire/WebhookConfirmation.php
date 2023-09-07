@@ -30,7 +30,7 @@ class WebhookConfirmation extends Component
             'city' => $this->result['content']['billingAddressCity'],
             'state' => $this->result['content']['billingAddressProvince'],
             'postal_code' => $this->result['content']['billingAddressPostalCode'],
-            'created_at' => date()
+            'created_at' => date("Y-m-d H:i:s")
         ]);
         
         // check if event host credited
@@ -46,7 +46,7 @@ class WebhookConfirmation extends Component
             'donor_id' => $donor->id,
             'gift_total' => $this->result['content']['finalGrandTotal'],
             'user_id' => $userId,
-            'created_at' => date()
+            'created_at' => date("Y-m-d H:i:s")
         ]);
 
         Mail::to( $this->result['content']['email'] )->send(new OrderConfirmation($gift));
@@ -59,10 +59,10 @@ class WebhookConfirmation extends Component
         foreach ( $this->result['content']['items'] as $newItem )
         {
             $itemIdToStore = Item::where('name', $newItem['name'])->first()->id;
-            $gift->items()->attach( [ 'item_id' => $itemIdToStore ], [ 'item_quantity' => $newItem['quantity'] ], [ 'created_at' => date() ] );
+            $gift->items()->attach( [ 'item_id' => $itemIdToStore ], [ 'item_quantity' => $newItem['quantity'] ], [ 'created_at' => date("Y-m-d H:i:s") ] );
             if ( $userId != null )
             {
-                User::find( $userId )->items()->attach( [ 'item_id' => $itemIdToStore ], [ 'item_quantity' => $newItem['quantity'], [ 'created_at' => date() ] ] );
+                User::find( $userId )->items()->attach( [ 'item_id' => $itemIdToStore ], [ 'item_quantity' => $newItem['quantity'], [ 'created_at' => date("Y-m-d H:i:s") ] ] );
                 $userEmail = User::where('name', $this->result['content']['items'][0]['customFields'][0]['value'])->first()->email;
             }    
         }
