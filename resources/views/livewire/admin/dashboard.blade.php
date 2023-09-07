@@ -54,6 +54,37 @@
                 @endforeach
             </div>
         </div>
+        <div class="mt-10 max-w-5xl mx-auto">
+            <div class="my-3 text-3xl font-bold">
+                @php echo date("Y") @endphp Giving Catalog Item Summary
+            </div>
+            <div class="py-16">
+                
+            </div>
+            
+            <div class="mb-6 grid grid-cols-4 gap-6">
+                @foreach ( $gift_items as $item )
+                    <div class="bg-white text-center flex flex-col rounded-md overflow-hidden">
+                        <div class="mb-6 w-full">
+                            <img src="/storage/{{ $item->featured_image[0]['path']}}" alt="" class="object-fit">
+                        </div>
+                        <div class="mb-4 text-3xl">
+                            
+                            @if ( $item->id != null )
+                                {{ App\Models\Item::where('statamic_id', $item->id)->first()->sales()->count() > 0 ? App\Models\Item::where('statamic_id', $item->id)->first()->sales()->first()->quantity : 0 }}
+                            @endif
+
+                        </div>
+                        <div class="mb-8 text-sm">
+                            @if ( count( $item->item_sponsor ) )
+                            {{ $item->item_sponsor[0]['title'] }}
+                            @endif
+                        </div>
+                    </div>
+                    
+                @endforeach
+            </div>
+        </div>
             
 
     @elsecan('edit host')
