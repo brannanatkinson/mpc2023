@@ -20,7 +20,8 @@
                     ${{ price | format_number(2, '.', ',')}}
                 </div>
                 
-                <button class="snipcart-add-item px-4 py-3 bg-mp-blue-green text-white"
+                {{ livewire:item-button :item="id" }}
+                <!-- <button class="snipcart-add-item px-4 py-3 bg-mp-blue-green text-white"
                     data-item-id="{{ id }}"
                     data-item-price="{{ price }}"
                     data-item-url="{{ url }}"
@@ -29,7 +30,7 @@
                     data-item-custom1-name="Credit your virtual host"
                     >
                     Add to cart
-                </button>
+                </button> -->
                 <ul class="mt-4 list-disc ml-8 text-mp-blue-green">
                     {{ if item_sponsor  }}
                         <li>Double your gift with match</li>
