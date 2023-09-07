@@ -36,7 +36,12 @@ class ItemButton extends Component
         $this->itemUrl = $result->data->url;
 
         $hostNames = '--|';
-        $hosts = User::permission('edit host')->orderBy('name')->get();
+        this->hosts = User::permission('edit host')
+            ->orderBy('name')
+            ->whereHas('campaigns', function( Builder $query){
+                $query->where('year', '=', date('Y'));
+            })
+            ->get();
         $lastElement = $hosts->last();
         foreach ( $hosts as $host ) {
             if ( $lastElement->name == $host->name ){
