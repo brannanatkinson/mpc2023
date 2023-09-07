@@ -42,7 +42,18 @@
                  </div>
                 <div><!-- blank  --></div>
             </div>
-            
+            <div class="mt-8 grid grid-cols-5 gap-4">
+                <div class=" col-span-2 font-bold">Host Name</div>
+                <div class=" font-bold">Amount Raised</div>
+                <div class=" font-bold">Total Gifts</div>
+                <div class=" font-bold">Total Items</div>
+                @foreach( App\Models\User::permission('edit host')->orderBy('name')->get() as $host )
+                <div class=" col-span-2">{{ $host->name }}</div>
+                <div class="">${{ App\Models\Gift::where('user_id', '=', $host->id )->sum('gift_total') }}</div>
+                <div class="">{{ App\Models\Gift::where('user_id', '=', $host->id )->count() }}</div>
+                <div class="">{{ $host->items->sum('pivot.item_quantity') }}</div>
+                @endforeach
+            </div>
         </div>
         <div class="mt-10 max-w-5xl mx-auto">
             <div class="my-3 text-3xl font-bold">
@@ -59,7 +70,8 @@
                             <img src="/storage/{{ $item->featured_image[0]['path']}}" alt="" class="object-fit">
                         </div>
                         <div class="mb-4 text-3xl">
-                            0
+                            {{ App\Models\Item::where('statamic_id', $item->id)->first()->sales()->count() > 0 ? App\Models\Item::where('statamic_id', $item->id)->first()->sales()->first()->quantity : 0 }}
+
                         </div>
                         <div class="mb-8 text-sm">
                             @if ( count( $item->item_sponsor ) )
