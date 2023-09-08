@@ -1,26 +1,25 @@
-<div class=" block mb-8 ">
+<div class=" block">
     {{ featured_image }}
     <img src="{{ url }}" alt="" class="h-96 w-full object-cover">
     {{ /featured_image }}
 </div>
-<div class="container mx-auto">
-    <!-- {{ livewire:results }} -->
-</div>
-<div class="container mx-auto pb-8">
-    <div class="pt-8 pb-4 text-4xl text-mp-blue-green font-display text-center">{{ page_header }}</div>
-    <div class="px-4 w-full text-xl lg:w-3/5 mx-auto">
-        {{ content }}
+<div class="bg-mp-light-lime">
+    <div class="container mx-auto py-12">
+        <div class="pt-8 pb-4 text-4xl text-mp-navy font-display text-center">{{ page_header }}</div>
+        <div class="px-4 w-full text-xl lg:w-3/5 mx-auto">
+            {{ content }}
+        </div>
     </div>
 </div>
 <!-- CHAMPTION OF HOPE -->
 {{ if now | is_after (campaign:campaign_start_date) }} 
-<div class="bg-mp-light-lime py-12 text-white">
+<div class="py-12 text-white">
     <div class="container mx-auto max-w-5xl">
-        <div class="mb-44 text-center font-display text-3xl text-mp-navy">
+        <div class="mb-4 text-center font-display text-4xl text-mp-navy">
             {{ champion_of_hope_headline }}
         </div>
         <div class="mb-6">
-             <div class="text-center font-display tracking-wide uppercase text-mp-blue-green">Presenting Sponsor</div>
+             <div class="text-center tracking-wide uppercase text-black">Presenting Sponsor</div>
             <div>
                 {{ collection:sponsors sponsor_type:contains="4" sort="order"}}
                     <a href="http://{{ sponsor_website }}" target="_blank">
