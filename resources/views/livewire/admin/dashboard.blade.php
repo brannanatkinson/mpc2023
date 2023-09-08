@@ -54,16 +54,16 @@
                 @endforeach
             </div>
         </div>
-        <div class="mt-10 max-w-5xl mx-auto">
+        <!-- <div class="mt-10 max-w-5xl mx-auto">
             <div class="my-3 text-3xl font-bold">
                 @php echo date("Y") @endphp Giving Catalog Item Summary
             </div>
             <div class="py-16">
                 
             </div>
-        </div>
+        </div> -->
             
-        <div class="pb-16 max-w-5xl mx-auto">
+        <div class="pb-16 mt-12 max-w-5xl mx-auto">
             <div class="mt-8 mb-6 text-3xl font-bold">
                 @php echo date("Y") @endphp Gift Summary
             </div>
