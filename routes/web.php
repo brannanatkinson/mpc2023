@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Admin\Dashboard;
+use App\Http\Livewire\Admin\BoardDashboard;
 use App\Http\Livewire\Admin\Hosts\AllHosts;
 use App\Http\Livewire\Admin\Hosts\UpdateHostForm;
 use App\Http\Livewire\Hosts\HostPublicPage;
@@ -42,6 +43,7 @@ Route::middleware([
     Route::get('/admin/statamic', [DbApi::class, 'index']);
 });
 Route::get('/hosts/{url}', HostPublicPage::class);
+Route::get('/mpc-board-dashboard', BoardDashboard::class);
 
 Route::post('/webhook', WebhookConfirmation::class);
 Route::get('/thankyou/{order_token}', OrderConfirmation::class);

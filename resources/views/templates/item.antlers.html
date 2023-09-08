@@ -19,25 +19,26 @@
                 <div class="mb-6 text-3xl">
                     ${{ price | format_number(2, '.', ',')}}
                 </div>
-                
-                {{ livewire:item-button :item="id" }}
-                <!-- <button class="snipcart-add-item px-4 py-3 bg-mp-blue-green text-white"
-                    data-item-id="{{ id }}"
-                    data-item-price="{{ price }}"
-                    data-item-url="{{ url }}"
-                    data-item-description="{{ excerpt }}"
-                    data-item-name="{{ title }}"
-                    data-item-custom1-name="Credit your virtual host"
-                    >
-                    Add to cart
-                </button> -->
-                <ul class="mt-4 list-disc ml-8 text-mp-blue-green">
-                    {{ if item_sponsor  }}
-                        <li>Double your gift with match</li>
-                    {{ /if  }}
-                        <li>Gift is 100% tax-deductible</li> 
-                    
-                </ul>
+                {{ if now | is_between( campaign:campaign_start_date, campaign:campaign_end_date ) }} 
+                    {{ livewire:item-button :item="id" }}
+                    <!-- <button class="snipcart-add-item px-4 py-3 bg-mp-blue-green text-white"
+                        data-item-id="{{ id }}"
+                        data-item-price="{{ price }}"
+                        data-item-url="{{ url }}"
+                        data-item-description="{{ excerpt }}"
+                        data-item-name="{{ title }}"
+                        data-item-custom1-name="Credit your virtual host"
+                        >
+                        Add to cart
+                    </button> -->
+                    <ul class="mt-4 list-disc ml-8 text-mp-blue-green">
+                        {{ if item_sponsor  }}
+                            <li>Double your gift with match</li>
+                        {{ /if  }}
+                            <li>Gift is 100% tax-deductible</li> 
+                        
+                    </ul>
+                {{ /if }}
                 
                 <p class="mt-6 text-lg text-mp-blue-green leading-snug">{{ content }}</p>
                 <!-- 

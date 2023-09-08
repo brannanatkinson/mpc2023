@@ -6,7 +6,7 @@
   <meta name="x-apple-disable-message-reformatting"> 
   <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
   <meta content="telephone=no" name="format-detection"> 
-  <title>2022 Gift Thank You To Donor</title> 
+  <title>2023 Gift Thank You To Donor</title> 
   <!--[if (mso 16)]>
     <style type="text/css">
     a {text-decoration: none;}
@@ -135,7 +135,7 @@ a[x-apple-data-detectors] {
                       <td align="center" style="padding:0;Margin:0"><h1 style="Margin:0;line-height:36px;mso-line-height-rule:exactly;font-family:'playfair display', georgia, 'times new roman', serif;font-size:30px;font-style:normal;font-weight:normal;color:#333333">You're a Housing Hope Hero!</h1></td> 
                      </tr> 
                      <tr style="border-collapse:collapse"> 
-                      <td align="left" style="padding:0;Margin:0;padding-top:25px;padding-bottom:40px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:19px;color:#333333;font-size:16px">The survivors of interpersonal violence face many challenges.<br><br>Your gift to Housing Hope 2022&nbsp;will empower them and their families to take back control from their abusers and find new joy in their lives.<br><br>Everyone at The Mary Parrish Center is immensely grateful for your support of our organization and, most importantly, the survivors we serve every day.<br><br>~ The Mary Parrish Center Board &amp; Staff</p></td> 
+                      <td align="left" style="padding:0;Margin:0;padding-top:25px;padding-bottom:40px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:19px;color:#333333;font-size:16px">The survivors of interpersonal violence face many challenges.<br><br>Your gift to Housing Hope 2023&nbsp;will empower them and their families to take back control from their abusers and find new joy in their lives.<br><br>Everyone at The Mary Parrish Center is immensely grateful for your support of our organization and, most importantly, the survivors we serve every day.<br><br>~ The Mary Parrish Center Board &amp; Staff</p></td> 
                      </tr> 
                    </table></td> 
                  </tr> 
@@ -158,7 +158,7 @@ a[x-apple-data-detectors] {
                       <td align="center" style="padding:0;Margin:0;padding-bottom:5px;padding-top:15px"><h3 style="Margin:0;line-height:29px;mso-line-height-rule:exactly;font-family:'playfair display', georgia, 'times new roman', serif;font-size:24px;font-style:normal;font-weight:normal;color:#333333">Please Help Us Spread The Word</h3></td> 
                      </tr> 
                      <tr style="border-collapse:collapse"> 
-                      <td align="left" style="padding:0;Margin:0;padding-bottom:10px;padding-top:25px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:19px;color:#333333;font-size:16px">We would love your help spreading the word about Housing Hope 2022&nbsp;to more people. You've seen how fun and easy it is to shop our online Giving Catalog.&nbsp;<br><br>We've made it easy for you to share details about Housing Hope by:</p></td> 
+                      <td align="left" style="padding:0;Margin:0;padding-bottom:10px;padding-top:25px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:19px;color:#333333;font-size:16px">We would love your help spreading the word about Housing Hope 2023&nbsp;to more people. You've seen how fun and easy it is to shop our online Giving Catalog.&nbsp;<br><br>We've made it easy for you to share details about Housing Hope by:</p></td> 
                      </tr> 
                      <tr style="border-collapse:collapse"> 
                       <td align="left" style="padding:0;Margin:0;padding-top:5px;padding-bottom:5px"> 
@@ -169,7 +169,7 @@ a[x-apple-data-detectors] {
                        </ul></td> 
                      </tr> 
                      <tr style="border-collapse:collapse"> 
-                      <td align="left" style="padding:0;Margin:0;padding-bottom:20px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;color:#333333;font-size:16px"><br></p><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;color:#333333;font-size:16px">Please visit personal Thank You page on our website to find out how you can share information about Housing Hope 2022.</p></td> 
+                      <td align="left" style="padding:0;Margin:0;padding-bottom:20px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;color:#333333;font-size:16px"><br></p><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;color:#333333;font-size:16px">Please visit personal Thank You page on our website to find out how you can share information about Housing Hope 2023.</p></td> 
                      </tr> 
                      <tr style="border-collapse:collapse"> 
                       <td align="center" style="padding:0;Margin:0;padding-top:10px;padding-bottom:40px"><span class="es-button-border" style="border-style:solid;border-color:#2cb543;background:#539291;border-width:0px;display:inline-block;border-radius:1730px;width:auto"><a href="https://housinghopenashville.org/thankyou/{{ $gift->order_token }}" class="es-button es-button-1" target="_blank" style="mso-style-priority:100 !important;text-decoration:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;color:#FFFFFF;font-size:18px;border-style:solid;border-color:#539291;border-width:20px;display:inline-block;background:#539291;border-radius:1730px;font-family:arial, 'helvetica neue', helvetica, sans-serif;font-weight:normal;font-style:normal;line-height:22px;width:auto;text-align:center">Go to Your Thank You Page </a></span></td> 
@@ -217,7 +217,7 @@ a[x-apple-data-detectors] {
                   <td align="left" style="padding:0;Margin:0;width:305px"> 
                    <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px"> 
                      <tr style="border-collapse:collapse"> 
-                      <td align="center" style="padding:0;Margin:0;padding-top:10px;padding-bottom:20px;font-size:0px"><img class="adapt-img" src="https://ieseof.stripocdn.email/content/guids/CABINET_5119714f609cd212afa0899d1971a6fd/images/91491599529239539.png" alt style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="270"></td> 
+                      <td align="center" style="padding:0;Margin:0;padding-top:10px;padding-bottom:20px;font-size:0px"><img class="adapt-img" src="https://ieseof.stripocdn.email/content/guids/CABINET_e81672b205d4d74ed656dee132a1e925/images/32981631456505205.jpg" alt style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="270"></td> 
                      </tr> 
                    </table></td> 
                  </tr> 
@@ -231,7 +231,7 @@ a[x-apple-data-detectors] {
                   <td align="left" style="padding:0;Margin:0;width:630px"> 
                    <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px"> 
                      <tr style="border-collapse:collapse"> 
-                      <td align="center" style="padding:0;Margin:0;padding-bottom:15px;font-size:0px"><img class="adapt-img" src="https://ieseof.stripocdn.email/content/guids/CABINET_e81672b205d4d74ed656dee132a1e925/images/32981631456505205.jpg" alt style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="350"></td> 
+                      <td align="center" style="padding:0;Margin:0;padding-bottom:15px;font-size:0px"><img class="adapt-img" src="https://ieseof.stripocdn.email/content/guids/CABINET_5119714f609cd212afa0899d1971a6fd/images/91491599529239539.png" alt style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="350"></td> 
                      </tr> 
                    </table></td> 
                  </tr> 
@@ -264,7 +264,7 @@ a[x-apple-data-detectors] {
                   <td align="center" valign="top" style="padding:0;Margin:0;width:630px"> 
                    <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px"> 
                      <tr style="border-collapse:collapse"> 
-                      <td align="center" style="padding:0;Margin:0;padding-bottom:20px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;color:#ffffff;font-size:16px">Thank you for supporting Housing Hope 2022&nbsp;and The Mary Parrish Center.</p></td> 
+                      <td align="center" style="padding:0;Margin:0;padding-bottom:20px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;color:#ffffff;font-size:16px">Thank you for supporting Housing Hope 2023&nbsp;and The Mary Parrish Center.</p></td> 
                      </tr> 
                      <tr style="border-collapse:collapse"> 
                       <td align="center" style="padding:0;Margin:0;font-size:0px"><img class="adapt-img" src="https://ieseof.stripocdn.email/content/guids/CABINET_e81672b205d4d74ed656dee132a1e925/images/5571598310117235.png" alt style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="300"></td> 
