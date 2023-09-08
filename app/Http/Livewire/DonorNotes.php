@@ -10,7 +10,7 @@ class DonorNotes extends Component
     public $donorsWithNotes;
     public function mount()
     {
-        $this->donorsWithNotes = Donor::where('note', '!=', null)->get();
+        $this->donorsWithNotes = Donor::where('note', '!=', null)->where('created_at', '>', '2023-01-01')->get();
     }
     public function render()
     {
