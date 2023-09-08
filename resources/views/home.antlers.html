@@ -13,46 +13,9 @@
         <link rel="preconnect" href="https://cdn.snipcart.com">
     </head>
     <body class="font-sans leading-normal text-gray-800">
-        <ul class="max-w-7xl mx-auto h-36 flex text-mp-blue-green justify-between items-center">
-            <li><a href="/" class="">
-                {{ campaign:housing_hope_logo }}
-                <img src="{{ url }}" class="w-48" alt="">
-                {{ /campaign:housing_hope_logo }}
-            </a></li>
-            {{ if now | is_between( campaign:campaign_start_date, campaign:campaign_end_date ) }} 
-                {{ nav:main }}
-                    <li><a href="{{ url }}" class=" {{ is_current ?= 'font-bold' }}">{{ title }}</a></li>
-                {{ /nav:main }}
-            {{ else }}
-                {{ nav:before_after }}
-                    <li><a href="{{ url }}" class=" {{ is_current ?= 'font-bold' }}">{{ title }}</a></li>
-                {{ /nav:before_after }}
-            {{ /if }}
-            <li><a href="https://maryparrish.org" class=" {{ is_current ?= 'font-bold' }}">The Mary Parrish Center</a></li>
-            {{ if now | is_between( campaign:campaign_start_date, campaign:campaign_end_date ) }} 
-            <div class="pl-24">
-                <div class="snipcart-summary">
-                    <a href="#" class="snipcart-checkout justify-self-end"><i class="fa-duotone fa-shopping-cart text-mp-blue-green"></i></a>
-                    <span class="snipcart-total-items text-mp-coral"></span>
-                    <span class="snipcart-total-price"></span>
-                </div>
-            </div>
-            {{ /if }}
-        </ul>
         <main>
-            <!-- <div class="py-12">
-                {{ now | format('Y:m:d H:m') }}
-
-                {{ if now | is_before( campaign:campaign_start_date ) }} 
-                before
-                {{ /if }}
-                {{ if now | is_between( campaign:campaign_start_date, campaign:campaign_end_date ) }} 
-                during 
-                {{ /if }}
-                {{ if now | is_after( campaign:campaign_end_date ) }} 
-                after 
-                {{ /if }} 
-            </div> -->
+            {{ partial:navigation }}
+            
             <div class=" bg-mp-blue-green">
                 <div class="lg:relative">
                     <div class="mx-auto max-w-7xl w-full pt-16 pb-20 text-center lg:py-24 lg:text-left">
@@ -95,7 +58,7 @@
             ** Results
             -->
             {{ if now | is_between( campaign:campaign_start_date, campaign:campaign_end_date ) }}
-                <div class="container py-16 max-w-5xl mx-auto">
+                <div class="container py-12 max-w-5xl mx-auto">
                     <div class="mt-8 mb-4 text-4xl font-display leading-tight text-mp-blue-green  text-center">
                         Housing Hope 2023 Live Results
                     </div>
@@ -106,7 +69,7 @@
             {{ /if }}
             {{ if now | is_after( campaign:campaign_end_date ) }} 
                                 
-                <div class="container py-16 max-w-5xl mx-auto">
+                <div class="container py-12 max-w-5xl mx-auto">
                     <div class="mt-8 mb-4 text-4xl font-display leading-tight text-mp-blue-green  text-center">
                         Housing Hope 2023 Final Results
                     </div>
@@ -130,7 +93,7 @@
             -->
             {{ if now | is_between( campaign:campaign_start_date, campaign:campaign_end_date ) }} 
             <div class="bg-mp-light-gray">
-                 <div class="container mx-auto py-16">
+                 <div class="container mx-auto py-12">
                    
                     <div class="mt-12 max-w-4xl mx-auto mb-8 px-6 md:px-0">
                         <div class="mb-4 text-5xl text-center text-mp-blue-green font-display">{{ how_to_participate_headline }}</div>
@@ -171,8 +134,8 @@
             -->
             {{ if now | is_between( campaign:campaign_start_date, campaign:campaign_end_date ) }} 
 
-            <div class="max-w-6xl mx-auto py-16">
-                <div class="py-16">
+            <div class="max-w-6xl mx-auto py-12 md:px-0">
+                <div class="py-12 px-6 md:px-0 ">
                     <div class="mb-4 text-5xl text-mp-blue-green text-center font-display">
                         {{ sponsors_header }}
                     </div>
@@ -180,8 +143,8 @@
                         {{ sponsors_subhead}}
                     </div>
                 </div>
-                <div class="container grid grid-cols-1 md:grid-cols-2 mb-8">
-                    <div class="col-span-2 mb-16">  
+                <div class="container grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                    <div class="md:col-span-2 md:mb-16">  
                         <div class="mb-4 text-center font-display text-3xl text-mp-blue-green">Presenting Sponsor</div>
                         <div>
                             {{ collection:sponsors sponsor_type:contains="1" sort="order"}}
@@ -295,7 +258,7 @@
             <!-- 
             ** About MPC
             -->
-            <div id="mpc" class="bg-mp-coral py-16 ">
+            <div id="mpc" class="bg-mp-coral py-12 ">
                 <div class="container mx-auto px-4 lg:px-0 max-w-6xl">
                     <img src="{{ site_url  }}/storage/primary/mp_green_logo.png" class="mx-auto w-96 mb-8" alt="">
                     <div class="mb-4 text-3xl lg:text-4xl text-center text-navy font-display italic leading-tight"> {{ about_headline }}

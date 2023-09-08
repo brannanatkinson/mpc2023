@@ -8,8 +8,8 @@
 
     
     <div class="max-w-6xl mx-auto">
-        <div class="container grid grid-cols-1 md:grid-cols-2 mb-8">
-            <div class="col-span-2 mb-16">  
+        <div class="container grid grid-cols-1 md:grid-cols-2 mb-8 gap-8">
+            <div class="md:col-span-2 md:mb-16">  
                 <div class="mb-4 text-center font-display text-3xl text-mp-blue-green">Presenting Sponsor</div>
                 <div>
                     {{ collection:sponsors sponsor_type:contains="1" sort="order"}}
@@ -32,7 +32,6 @@
                     {{ /collection:sponsors }}
             </div>
             <div>
-                
                 <div>
                     <div class="mb-4 text-center font-display text-3xl text-mp-blue-green">Giving Wall Sponsor</div>
                 </div>

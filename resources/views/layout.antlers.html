@@ -13,32 +13,7 @@
         <link rel="preconnect" href="https://cdn.snipcart.com">
     </head>
     <body class="font-sans leading-normal text-gray-800">
-        <ul class="max-w-7xl mx-auto h-36 flex text-mp-blue-green justify-between items-center">
-            <li><a href="/" class="">
-                {{ campaign:housing_hope_logo }}
-                <img src="{{ url }}" class="w-48" alt="">
-                {{ /campaign:housing_hope_logo }}
-            </a></li>
-            {{ if now | is_between( campaign:campaign_start_date, campaign:campaign_end_date ) }} 
-                {{ nav:main }}
-                    <li><a href="{{ url }}" class=" {{ is_current ?= 'font-bold' }}">{{ title }}</a></li>
-                {{ /nav:main }}
-            {{ else }}
-                {{ nav:before_after }}
-                    <li><a href="{{ url }}" class=" {{ is_current ?= 'font-bold' }}">{{ title }}</a></li>
-                {{ /nav:before_after }}
-            {{ /if }}
-            <li><a href="https://maryparrish.org" class=" {{ is_current ?= 'font-bold' }}">The Mary Parrish Center</a></li>
-            {{ if now | is_between( campaign:campaign_start_date, campaign:campaign_end_date ) }} 
-            <div class="pl-24">
-                <div class="snipcart-summary">
-                    <a href="#" class="snipcart-checkout justify-self-end"><i class="fa-duotone fa-shopping-cart text-mp-blue-green"></i></a>
-                    <span class="snipcart-total-items text-mp-coral"></span>
-                    <span class="snipcart-total-price"></span>
-                </div>
-            </div>
-            {{ /if }}
-        </ul>
+        {{ partial:navigation }}
         <div class=" mx-auto lg:min-h-screen">
 
             {{ template_content }}

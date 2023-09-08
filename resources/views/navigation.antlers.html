@@ -1,0 +1,76 @@
+<!-- 
+* mobile
+-->
+
+<div x-data="{ isOpen: false }" class="max-w-7xl mx-auto flex flex-col items-center md:flex-row py-8 bg-white">
+    <div class="mr-12 mb-4 lg:mb-0">
+        <a href="/">
+        {{ campaign:housing_hope_logo }}
+            <img src="{{ url }}" class="w-48" alt="">
+        {{ /campaign:housing_hope_logo }}
+        </a>
+    </div>
+    <!-- left header section -->
+    <div class="flex items-center">
+        <div>
+            <button @click="isOpen = true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10  md:hidden text-mp-coral" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="hidden space-x-6 lg:inline-block">
+            <ul class="max-w-7xl mx-auto h-36 flex text-mp-blue-green justify-between items-center">
+               {{ if now | is_between( campaign:campaign_start_date, campaign:campaign_end_date ) }} 
+                    {{ nav:main }}
+                        <li class="inline-block mr-12"><a href="{{ url }}" class=" {{ is_current ?= 'font-bold' }}">{{ title }}</a></li>
+                    {{ /nav:main }}
+                {{ else }}
+                    {{ nav:before_after }}
+                        <li class="inline-block mr-12"><a href="{{ url }}" class=" {{ is_current ?= 'font-bold' }}">{{ title }}</a></li>
+                    {{ /nav:before_after }}
+                {{ /if }}
+                <li class="inline-block">
+                    <a href="https://maryparrish.org">The Mary Parrish Center</a>
+                </li>
+            </ul>
+        </div>
+        {{ if now | is_between( campaign:campaign_start_date, campaign:campaign_end_date ) }} 
+        <div class="pl-24">
+            <div class="snipcart-summary">
+                <a href="#" class="snipcart-checkout justify-self-end"><i class="fa-duotone fa-shopping-cart text-mp-blue-green"></i></a>
+                <span class="snipcart-total-items text-mp-coral"></span>
+                <span class="snipcart-total-price"></span>
+            </div>
+        </div>
+        {{ /if }}
+        
+
+        <!-- mobile navbar -->
+        <div class="mobile-navbar">
+            <!-- navbar wrapper -->
+            <div class="fixed left-0 w-full h-64 p-5 bg-white rounded-lg shadow-xl top-40 z-50" x-show="isOpen"
+                @click.away=" isOpen = false">
+                <div class="flex flex-col space-y-6">
+
+                    {{ if now | is_between( campaign:campaign_start_date, campaign:campaign_end_date ) }} 
+                        {{ nav:main }}
+                            <div class=""><a href="{{ url }}" class=" {{ is_current ?= 'font-bold' }}">{{ title }}</a></div>
+                        {{ /nav:main }}
+                    {{ else }}
+                        {{ nav:before_after }}
+                            <div class=""><a href="{{ url }}" class=" {{ is_current ?= 'font-bold' }}">{{ title }}</a></div>
+                        {{ /nav:before_after }}
+                    {{ /if }}
+                    <a href="https://maryparrish.org" class="text-black">The Mary Parrish Center</a>
+                </div>
+            </div>
+        </div>
+        <!-- end mobile navbar -->
+    </div>
+    <!-- right header section -->
+
+</div>
+
