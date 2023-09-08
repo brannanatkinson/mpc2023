@@ -20,10 +20,10 @@
 
 @layer utilities{
   .catalog-odd-row {
-    @apply py-16 bg-mp-light-gray
+    @apply py-12 bg-mp-light-gray
   }
   .catalog-even-row {
-    @apply py-16 bg-white
+    @apply py-12 bg-white
   }
   .resp-table {
     width: 100%;

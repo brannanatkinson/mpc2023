@@ -1,13 +1,27 @@
 <div class="">
+     
+     <!-- Banner in Three parts -->
+    <div class="max-w-4xl mx-auto mb-8 flex flex-col items-center md:flex-row md:justify-center">
+        {{ giving_wall_icon }}
+            <img src="{{ url }} " class="h-32 z-20" alt="">
+         {{ /giving_wall_icon }}
+         {{ giving_wall_name }}
+            <img src="{{ url }}" class="h-32 md:h-40 md:self-center -mt-8 md:mt-0 " alt="">
+        {{ /giving_wall_name }}
+        {{ giving_wall_sponsor }}
+            <img src="{{ url }}" class="h-24 md:h-24 self-center z-10 -mt-8 md:mt-0 md:self-center" alt="">
+        {{ /giving_wall_sponsor }}
+    </div>
+
     <div class="container max-w-6xl mx-auto">
          {{ livewire:results }}
     </div>
-    <div class="bg-mp-light-lime py-8">
+    <div class="bg-mp-light-lime">
        <div class="container max-w-6xl mx-auto">
             {{ livewire:donor-wall }}
        </div>
     </div>
-    <div class="bg-mp-navy py-8">
+    <div class="bg-mp-navy">
        <div class="container max-w-6xl mx-auto">
             {{ livewire:donor-notes }}
        </div>
