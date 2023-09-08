@@ -7,6 +7,12 @@
             {{ __('Housing Hope 2023 Dashboard') }}
         </h2>
     </x-slot>
+
+    <div class="py-12">
+        <div class="text-center text-4xl font-display text-mp-blue-green">
+            @php echo date("Y") @endphp Housing Hope Results
+        </div>
+    </div>
     
     <div class="max-w-5xl mx-auto">
         @livewire('results')
