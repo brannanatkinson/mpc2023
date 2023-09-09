@@ -160,29 +160,35 @@
                         </div>
                     </div>
                     <div>  
-                        <div class="mb-4 text-center font-display text-3xl text-mp-blue-green">Giving Catalog Sponsor</div>
-                        <div>
-                            {{ collection:sponsors sponsor_type:contains="2" sort="order"}}
-                                <a href="http://{{ sponsor_website }}" target="_blank">
-                                    {{ logo }}
-                                        <img src="{{ url }}" class="max-h-48 mx-auto" alt="">
-                                    {{ /logo }}
-                                </a>
-                            {{ /collection:sponsors }}
+                        <div class="text-center font-display text-3xl text-mp-blue-green">
+                            Giving Catalog Sponsor
+                        </div>
+                        <div class="flex h-full content-center">
+                            <div class="self-center">
+                                {{ collection:sponsors sponsor_type:contains="2" sort="order"}}
+                                    <a href="http://{{ sponsor_website }}" target="_blank">
+                                        {{ logo }}
+                                            <img src="{{ url }}" class="mx-auto" alt="">
+                                        {{ /logo }}
+                                    </a>
+                                {{ /collection:sponsors }}
+                            </div>
                         </div>
                     </div>
                     <div>
-                        <div class="mb-4 text-center font-display text-3xl text-mp-blue-green">Giving Wall Sponsor</div>
-                        <div class="flex">
-                        <div class="h-full">
-                            {{ collection:sponsors sponsor_type:contains="3" sort="order"}}
-                                <a href="http://{{ sponsor_website }}" target="_blank">
-                                    {{ logo }}
-                                        <img src="{{ url }}" class="max-h-48 mx-auto" alt="">
-                                    {{ /logo }}
-                                </a>
-                            {{ /collection:sponsors }}
+                        <div class="text-center font-display text-3xl text-mp-blue-green">
+                            Giving Wall Sponsor
                         </div>
+                        <div class="flex h-full">
+                            <div class="self-center">
+                                {{ collection:sponsors sponsor_type:contains="3" sort="order"}}
+                                    <a href="http://{{ sponsor_website }}" target="_blank">
+                                        {{ logo }}
+                                            <img src="{{ url }}" class="mx-auto" alt="">
+                                        {{ /logo }}
+                                    </a>
+                                {{ /collection:sponsors }}
+                            </div>
                         </div>
                     </div>
                 </div>
