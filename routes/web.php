@@ -12,6 +12,7 @@ use App\Http\Controllers\DbApi;
 use Illuminate\Support\Facades\Http;
 
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -47,9 +48,6 @@ Route::get('/mpc-board-dashboard', BoardDashboard::class);
 
 Route::post('/webhook', WebhookConfirmation::class);
 Route::get('/thankyou/{order_token}', OrderConfirmation::class);
-
-
-
 
 
 

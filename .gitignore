@@ -14,7 +14,7 @@
 /vendor
 /content
 /resources/blueprints
-/resources/view/test.antler.html
+/resources/views/temlplates/test.antlers.html
 .env
 .env.backup
 .phpunit.result.cache
