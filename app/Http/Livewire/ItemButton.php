@@ -25,6 +25,7 @@ class ItemButton extends Component
     public $itemHosts;
     public $itemPrice;
     public $itemUrl;
+    public $hostToCredit;
 
     public function mount( $item )
     {
@@ -58,10 +59,10 @@ class ItemButton extends Component
 
         //dd ( session('host'));
         if( session('host') ) {
-            $hostToCredit = session('host') ;
+            $this->hostToCredit = session('host') ;
         }
         else {
-            $hostToCredit = '--';
+            $this->hostToCredit = '--';
         }
     }
     public function render()

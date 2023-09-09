@@ -21,14 +21,16 @@
                     <div class="mx-auto max-w-7xl w-full pt-16 pb-20 text-center lg:py-24 lg:text-left">
                         <div class="px-4 lg:w-2/5 sm:px-8 xl:pr-16">
                             <h1 class="mb-8 text-6xl text-white text-center font-display leading-none tracking-tight">
-                                {{ hero_headline }}
+                                {{ hero_headline }} - {{ now  }}
                             </h1>
                             <div class="mt-4 max-w-md mx-auto text-lg text-gray-100 sm:text-xl md:mt-8 md:max-w-3xl">
-                            {{ if now | is_before( campaign:campaign_start_date ) }} 
+
+                            {{ if now  | is_before( campaign:campaign_start_date )  }} 
                                 {{ hero_subhead_before }}
                             {{ /if }}
                             {{ if now | is_between( campaign:campaign_start_date, campaign:campaign_end_date ) }} 
                                 {{ hero_subhead_during }}
+
                                 <div class="mt-8">
                                     <a href="/catalog" class="px-4 py-4 text-white border border-2 border-white rounded-full hover:bg-mp-light-lime hover:text-black">Shop the Giving Catalog</a>
                                 </div>
@@ -57,7 +59,8 @@
             <!-- 
             ** Results
             -->
-            {{ if now | is_between( campaign:campaign_start_date, campaign:campaign_end_date ) }}
+            
+            {{ if now | timezone('America/Chicago') | is_between( campaign:campaign_start_date, campaign:campaign_end_date ) }}
                 <div class="container py-12 max-w-5xl mx-auto">
                     <div class="mt-8 mb-4 text-4xl font-display leading-tight text-mp-blue-green  text-center">
                         Housing Hope 2023 Live Results
@@ -158,26 +161,29 @@
                     </div>
                     <div>  
                         <div class="mb-4 text-center font-display text-3xl text-mp-blue-green">Giving Catalog Sponsor</div>
+                        <div>
                             {{ collection:sponsors sponsor_type:contains="2" sort="order"}}
                                 <a href="http://{{ sponsor_website }}" target="_blank">
                                     {{ logo }}
-                                        <img src="{{ url }}" class="w-1/2 mx-auto" alt="">
+                                        <img src="{{ url }}" class="max-h-48 mx-auto" alt="">
                                     {{ /logo }}
                                 </a>
                             {{ /collection:sponsors }}
+                        </div>
                     </div>
                     <div>
-                        
-                        <div>
-                            <div class="mb-4 text-center font-display text-3xl text-mp-blue-green">Giving Wall Sponsor</div>
+                        <div class="mb-4 text-center font-display text-3xl text-mp-blue-green">Giving Wall Sponsor</div>
+                        <div class="flex">
+                        <div class="h-full">
+                            {{ collection:sponsors sponsor_type:contains="3" sort="order"}}
+                                <a href="http://{{ sponsor_website }}" target="_blank">
+                                    {{ logo }}
+                                        <img src="{{ url }}" class="max-h-48 mx-auto" alt="">
+                                    {{ /logo }}
+                                </a>
+                            {{ /collection:sponsors }}
                         </div>
-                        {{ collection:sponsors sponsor_type:contains="3" sort="order"}}
-                            <a href="http://{{ sponsor_website }}" target="_blank">
-                                {{ logo }}
-                                    <img src="{{ url }}" class="w-1/2 mx-auto" alt="">
-                                {{ /logo }}
-                            </a>
-                        {{ /collection:sponsors }}
+                        </div>
                     </div>
                 </div>
                 
@@ -187,7 +193,7 @@
                         {{ collection:sponsors sponsor_type:contains="4" sort="order"}}
                             <a href="http://{{ sponsor_website }}" target="_blank">
                                 {{ logo }}
-                                    <img src="{{ url }}" class="w-1/2 mx-auto" alt="">
+                                    <img src="{{ url }}" class="h-48 mx-auto" alt="">
                                 {{ /logo }}
                             </a>
                         {{ /collection:sponsors }}
