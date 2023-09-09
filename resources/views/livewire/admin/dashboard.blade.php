@@ -68,7 +68,7 @@
                             
                         </div>
                         <div class="mb-4 text-3xl">
-                            {{ $item->sales }}
+                            Sales
                         </div>
                         <div class="mb-8 text-sm">
                             
