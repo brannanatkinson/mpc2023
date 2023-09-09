@@ -71,8 +71,8 @@
                             {{ App\Models\Item::where('statamic_id', $item->id)->first()->sales()->count() > 0 ? App\Models\Item::where('statamic_id', $item->id)->first()->sales()->first()->quantity : 0  }}
                         </div>
                         <div class="mb-8 text-sm">
-                            @if( $item->item_sponsor )
-                                {{ $item->item_sponsor[0]['title'] }}
+                            @if( $item->item_sponsor->count() > 0 )
+                                {{ $item->item_sponsor[0]->title }}
                             @endif
                         </div>
                     </div>
