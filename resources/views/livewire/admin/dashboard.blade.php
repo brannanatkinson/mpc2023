@@ -59,14 +59,16 @@
                 @php echo date("Y") @endphp Giving Catalog Item Summary
             </div>
             <div class="mb-6 grid grid-cols-4 gap-6">
-                @foreach ( App\Models\Item::all() as $item )
+                @foreach ( $gift_items as $item )
                     <div class="bg-white text-center flex flex-col rounded-md overflow-hidden">
                         <div class="mb-6 w-full">
-                            <img src="" alt="" class="object-fit">
-                            {{ Statamic\Facades\Entry::where('collection','items')->where('id', $item->statamic_id)->featured_image }}
+                            {{ featured_image }}
+                            <img src="{{ $url }}" alt="" class="object-fit">
+                            {{ /featured_image }}
+                            
                         </div>
                         <div class="mb-4 text-3xl">
-                            {{ $item->sales()->count() > 0 ? $item->sales()->first()->quantity : 0 }}
+                            {{ $item->sales }}
                         </div>
                         <div class="mb-8 text-sm">
                             
