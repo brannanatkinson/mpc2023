@@ -168,7 +168,7 @@ a[x-apple-data-detectors] {
                      @if ( $gift->user->UserMeta->goal != null )
                      @php $hostGoalProgress = ( App\Models\Gift::where('user_id', '=', $gift->user->id )->sum('gift_total') / $gift->user->UserMeta->goal ) * 100; @endphp
                      <tr style="border-collapse:collapse"> 
-                      <td align="left" style="padding:0;Margin:0;padding-top:10px;padding-bottom:35px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:16px;color:#333333;font-size:16px">You are now {{ number_format( $hostGoalProgress, 0 ) }}% toward your goal of <span class="text-green-700 font-bold">${{ $gift->user->UserMeta->goal }}<span> for The Mary Parrish Center&lt;</p></td> 
+                      <td align="left" style="padding:0;Margin:0;padding-top:10px;padding-bottom:35px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:16px;color:#333333;font-size:16px">You are now {{ number_format( $hostGoalProgress, 0 ) }}% toward your goal of <span class="text-green-700 font-bold">${{ $gift->user->UserMeta->goal }}<span> for The Mary Parrish Center.</p></td> 
                      </tr> 
                      @endif
                    </table></td> 
