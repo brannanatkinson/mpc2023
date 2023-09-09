@@ -65,7 +65,7 @@
                             <img src="{{ Storage::url( App\Models\Item::find( $item->id )->img ) }}" alt="" class="object-fit">
                         </div>
                         <div class="mb-4 text-3xl">
-                            
+                            {{ $item->sales()->count() > 0 ? $item->sales()->first()->quantity : 0 }}
                         </div>
                         <div class="mb-8 text-sm">
                             
