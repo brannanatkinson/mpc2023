@@ -22,7 +22,6 @@
             </div>
             <div class="hidden space-x-6 lg:inline-block">
                 <ul class="list-type-none text-mp-blue-green">
-                   @if ( getCurrentPeriod() == 'during')
                     <li class="inline-block mr-8">
                         <a href="/catalog">Giving Catalog</a>
                     </li>
@@ -32,7 +31,6 @@
                     <li class="inline-block mr-8">
                         <a href="/sponsors">Sponsors</a>
                     </li> 
-                    @endif
                     <li class="inline-block mr-8">
                         <a href="/about">Test About Housing Hope</a>
                     </li>
@@ -41,7 +39,6 @@
                     </li>
                 </ul>
             </div>
-            @if ( getCurrentPeriod() == 'during' )
             <div class="pl-24">
                 <div class="snipcart-summary">
                     <a href="#" class="snipcart-checkout justify-self-end"><i class="fa-duotone fa-shopping-cart text-mp-blue-green"></i></a>
@@ -49,7 +46,6 @@
                     <span class="snipcart-total-price"></span>
                 </div>
             </div>
-            @endif
             
 
             <!-- mobile navbar -->
@@ -58,11 +54,9 @@
                 <div class="fixed left-0 w-full h-64 p-5 bg-white rounded-lg shadow-xl top-40 z-50" x-show="isOpen"
                     @click.away=" isOpen = false">
                     <div class="flex flex-col space-y-6">
-                        @if ( getCurrentPeriod() == 'during')
                         <a href="/catalog" class="text-sm text-black">Giving Catalog</a>
                         <a href="/givingwall" class="text-sm text-black">Giving Wall</a>
                         <a href="/sponsors" class="text-sm text-black">Sponsors</a>
-                        @endif
                         <a href="/about" class="text-sm text-black">About Housing Hope</a>
                         <a href="https://maryparrish.org" class="text-sm text-black">The Mary Parrish Center</a>
                     </div>
