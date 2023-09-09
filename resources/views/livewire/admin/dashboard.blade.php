@@ -63,7 +63,7 @@
                     <div class="bg-white text-center flex flex-col rounded-md overflow-hidden">
                         <div class="mb-6 w-full">
                            
-                            <img src="{{ $item->featured_image }}" alt="" class="object-fit">
+                            <img src="{{ $item->featured_image[0]->permalink }}" alt="" class="object-fit">
                             
                             
                         </div>
