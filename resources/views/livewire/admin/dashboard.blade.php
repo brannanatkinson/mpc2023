@@ -62,9 +62,9 @@
                 @foreach ( $gift_items as $item )
                     <div class="bg-white text-center flex flex-col rounded-md overflow-hidden">
                         <div class="mb-6 w-full">
-                            {{ featured_image }}
-                            <img src="{{ $url }}" alt="" class="object-fit">
-                            {{ /featured_image }}
+                           
+                            <img src="{{ $item->featured_image }}" alt="" class="object-fit">
+                            
                             
                         </div>
                         <div class="mb-4 text-3xl">
