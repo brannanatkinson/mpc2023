@@ -62,7 +62,8 @@
                 @foreach ( App\Models\Item::all() as $item )
                     <div class="bg-white text-center flex flex-col rounded-md overflow-hidden">
                         <div class="mb-6 w-full">
-                            <img src="{{ Storage::url( App\Models\Item::find( $item->id )->img ) }}" alt="" class="object-fit">
+                            <img src="" alt="" class="object-fit">
+                            {{ Statamic\Facades\Entry::where('collection','items')->where('id', $item->statamic_id)->featured_image }}
                         </div>
                         <div class="mb-4 text-3xl">
                             {{ $item->sales()->count() > 0 ? $item->sales()->first()->quantity : 0 }}
