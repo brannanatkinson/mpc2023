@@ -54,14 +54,27 @@
                 @endforeach
             </div>
         </div>
-        <!-- <div class="mt-10 max-w-5xl mx-auto">
+        <div class="mt-10 max-w-5xl mx-auto">
             <div class="my-3 text-3xl font-bold">
                 @php echo date("Y") @endphp Giving Catalog Item Summary
             </div>
-            <div class="py-16">
-                
+            <div class="mb-6 grid grid-cols-4 gap-6">
+                @foreach ( App\Models\Item::all() as $item )
+                    <div class="bg-white text-center flex flex-col rounded-md overflow-hidden">
+                        <div class="mb-6 w-full">
+                            <img src="{{ Storage::url( App\Models\Item::find( $item->id )->img ) }}" alt="" class="object-fit">
+                        </div>
+                        <div class="mb-4 text-3xl">
+                            
+                        </div>
+                        <div class="mb-8 text-sm">
+                            
+                        </div>
+                    </div>
+                    
+                @endforeach
             </div>
-        </div> -->
+        </div>
             
         <div class="pb-16 mt-12 max-w-5xl mx-auto">
             <div class="mt-8 mb-6 text-3xl font-bold">

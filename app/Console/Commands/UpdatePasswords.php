@@ -5,6 +5,8 @@ namespace App\Console\Commands;
 use Illuminate\Console\Command;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Database\Eloquent\Builder;
+
 
 
 class UpdatePasswords extends Command
@@ -28,7 +30,11 @@ class UpdatePasswords extends Command
      */
     public function handle()
     {
-        $users = User::permission('edit host')->where('created_at', '>', '2023-01-01')->get();
+        $users = User::permission('edit host')
+            ->whereHas('campaigns', function( Builder $query){
+                $query->where('year', '=', date('Y'));
+            })
+            ->get();
         foreach ( $users as $user ){
             $user->password = Hash::make('HousingHope2023');
             $user->save();
