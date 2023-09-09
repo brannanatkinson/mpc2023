@@ -72,7 +72,7 @@
                         </div>
                         <div class="mb-8 text-sm">
                             @if( $item->item_sponsor )
-                                {{ App\Models\Sponsor::where('statamic_id', $item->item_sponsor)->first()->name
+                                {{ App\Models\Sponsor::where('statamic_id', $item->item_sponsor)->first()->name }}
                             @endif
                         </div>
                     </div>
