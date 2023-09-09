@@ -17,7 +17,7 @@
     <div class="catalog-odd-row ">
         <div class="container max-w-7xl mx-auto px-6 lg:px-0 mt-8 ">
             <div class="text-center uppercase tracking-widest">category</div>
-            {{ taxonomy:items title:contains="Beginnings" }}
+            {{ taxonomy:items title:contains="Beginnings"  }}
                 <div class="mb-4 text-4xl text-center font-display text-mp-blue-green">
                 {{ title }}
                 </div>
@@ -29,7 +29,7 @@
             {{ /taxonomy:items }}
             
             <div class="grid grid-col-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-4">
-                {{ collection:items taxonomy:items="new-beginnings" sort="order" }}
+                {{ collection:items taxonomy:items="new-beginnings" sort="order" status:published }}
                 <div class="flex flex-col overflow-hidden ">
                     <div class="mb-4">
                         <a href="{{ url }}">
@@ -96,7 +96,7 @@
         
         
             <div class="grid grid-col-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-4">
-                {{ collection:items taxonomy:items="back-to-school-work" sort="order" }}
+                {{ collection:items taxonomy:items="back-to-school-work" sort="order" status:published }}
 
                 <div class="flex flex-col overflow-hidden rounded-md">
                     <div class="mb-4">
@@ -147,7 +147,7 @@
         
         
             <div class="grid grid-col-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-4">
-                {{ collection:items taxonomy:items="going-places" sort="order" }}
+                {{ collection:items taxonomy:items="going-places" sort="order" status:published }}
 
                 <div class="flex flex-col overflow-hidden rounded-md">
                     <div class="mb-4">
@@ -203,7 +203,7 @@
         
         
             <div class="grid grid-col-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-4">
-                {{ collection:items taxonomy:items="healing-housing" sort="order" }}
+                {{ collection:items taxonomy:items="healing-housing" sort="order"  status:published}}
 
                 <div class="flex flex-col overflow-hidden rounded-md">
                     <div class="mb-4">
