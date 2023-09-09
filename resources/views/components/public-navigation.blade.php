@@ -34,7 +34,7 @@
                     </li> 
                     @endif
                     <li class="inline-block mr-8">
-                        <a href="/about">About Housing Hope</a>
+                        <a href="/about">Test About Housing Hope</a>
                     </li>
                     <li class="inline-block">
                         <a href="https://maryparrish.org">The Mary Parrish Center</a>

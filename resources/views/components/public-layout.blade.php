@@ -14,7 +14,7 @@
 
         <!-- Styles -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
-
+        @livewireStyles
 
         <!-- Scripts -->
         <script src="https://kit.fontawesome.com/556cea7374.js" crossorigin="anonymous"></script>
@@ -35,5 +35,6 @@
     <div class="py-12 bg-mp-navy text-white text-sm text-center">Housing Hope Nashville - &copy; 2023 The Mary Parrish Center - Photo Credit: Peyton Hoge - Website Development: Amy Atkinson Communications</div>
     <script async src="https://cdn.snipcart.com/themes/v3.2.1/default/snipcart.js"></script>
     <div hidden id="snipcart" data-api-key="{{ env('SNIPCART_KEY') }}"></div>
+    @livewireScripts
     </body>
 </html>
