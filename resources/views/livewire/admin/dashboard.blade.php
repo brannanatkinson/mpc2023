@@ -63,7 +63,7 @@
                     <div class="bg-white text-center flex flex-col rounded-md overflow-hidden">
                         <div class="mb-6 w-full">
                            
-                            <img src="{{ $item->featured_image[0]['path'] }}" alt="" class="object-fit">
+                            <img src="{{ env('APP_URL') }} storage/ {{ $item->featured_image[0]['path'] }}" alt="" class="object-fit">
                             
                             
                         </div>
