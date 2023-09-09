@@ -32,7 +32,7 @@
                         <a href="/sponsors">Sponsors</a>
                     </li> 
                     <li class="inline-block mr-8">
-                        <a href="/about">Test About Housing Hope</a>
+                        <a href="/about">About</a>
                     </li>
                     <li class="inline-block">
                         <a href="https://maryparrish.org">The Mary Parrish Center</a>
@@ -57,7 +57,7 @@
                         <a href="/catalog" class="text-sm text-black">Giving Catalog</a>
                         <a href="/givingwall" class="text-sm text-black">Giving Wall</a>
                         <a href="/sponsors" class="text-sm text-black">Sponsors</a>
-                        <a href="/about" class="text-sm text-black">About Housing Hope</a>
+                        <a href="/about" class="text-sm text-black">About</a>
                         <a href="https://maryparrish.org" class="text-sm text-black">The Mary Parrish Center</a>
                     </div>
                 </div>

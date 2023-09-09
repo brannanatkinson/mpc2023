@@ -206,7 +206,7 @@ a[x-apple-data-detectors] {
                   <td class="es-m-p20b" align="left" style="padding:0;Margin:0;width:305px"> 
                    <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px"> 
                      <tr style="border-collapse:collapse"> 
-                      <td align="center" style="padding:0;Margin:0;font-size:0px"><img class="adapt-img" src="https://ieseof.stripocdn.email/content/guids/CABINET_5119714f609cd212afa0899d1971a6fd/images/65791599529239710.png" alt style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="275"></td> 
+                      <td align="center" style="padding:0;Margin:0;font-size:0px"><img class="adapt-img" src="https://res.cloudinary.com/brannanatkinson/image/upload/v1694270241/MPC/pnfp.png" alt style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="275"></td> 
                      </tr> 
                    </table></td> 
                  </tr> 
@@ -217,7 +217,7 @@ a[x-apple-data-detectors] {
                   <td align="left" style="padding:0;Margin:0;width:305px"> 
                    <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px"> 
                      <tr style="border-collapse:collapse"> 
-                      <td align="center" style="padding:0;Margin:0;padding-top:10px;padding-bottom:20px;font-size:0px"><img class="adapt-img" src="https://ieseof.stripocdn.email/content/guids/CABINET_e81672b205d4d74ed656dee132a1e925/images/32981631456505205.jpg" alt style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="270"></td> 
+                      <td align="center" style="padding:0;Margin:0;padding-top:10px;padding-bottom:20px;font-size:0px"><img class="adapt-img" src="https://res.cloudinary.com/brannanatkinson/image/upload/v1694271424/MPC/hca.png" alt style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="270"></td> 
                      </tr> 
                    </table></td> 
                  </tr> 
@@ -225,17 +225,30 @@ a[x-apple-data-detectors] {
                <!--[if mso]></td></tr></table><![endif]--></td> 
              </tr> 
              <tr style="border-collapse:collapse"> 
-              <td align="left" style="Margin:0;padding-bottom:15px;padding-top:20px;padding-left:20px;padding-right:20px"> 
-               <table cellpadding="0" cellspacing="0" width="100%" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px"> 
+              <td align="left" style="Margin:0;padding-top:5px;padding-bottom:10px;padding-left:20px;padding-right:20px"> 
+               <!--[if mso]><table style="width:630px" cellpadding="0" cellspacing="0"><tr><td style="width:305px" valign="top"><![endif]--> 
+               <table cellpadding="0" cellspacing="0" class="es-left" align="left" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:left"> 
                  <tr style="border-collapse:collapse"> 
-                  <td align="left" style="padding:0;Margin:0;width:630px"> 
+                  <td class="es-m-p20b" align="left" style="padding:0;Margin:0;width:305px"> 
                    <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px"> 
                      <tr style="border-collapse:collapse"> 
-                      <td align="center" style="padding:0;Margin:0;padding-bottom:15px;font-size:0px"><img class="adapt-img" src="https://ieseof.stripocdn.email/content/guids/CABINET_5119714f609cd212afa0899d1971a6fd/images/91491599529239539.png" alt style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="350"></td> 
+                      <td align="center" style="padding:0;Margin:0;font-size:0px"><img class="adapt-img" src="https://res.cloudinary.com/brannanatkinson/image/upload/v1694270241/MPC/delek-globe-2.png" alt style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="275"></td> 
                      </tr> 
                    </table></td> 
                  </tr> 
-               </table></td> 
+               </table> 
+               <!--[if mso]></td><td style="width:20px"></td><td style="width:305px" valign="top"><![endif]--> 
+               <table cellpadding="0" cellspacing="0" class="es-right" align="right" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:right"> 
+                 <tr style="border-collapse:collapse"> 
+                  <td align="left" style="padding:0;Margin:0;width:305px"> 
+                   <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px"> 
+                     <tr style="border-collapse:collapse"> 
+                      <td align="center" style="padding:0;Margin:0;padding-top:10px;padding-bottom:20px;font-size:0px"><img class="adapt-img" src="https://res.cloudinary.com/brannanatkinson/image/upload/v1694270241/MPC/ascend.jpg" alt style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="270"></td> 
+                     </tr> 
+                   </table></td> 
+                 </tr> 
+               </table> 
+               <!--[if mso]></td></tr></table><![endif]--></td> 
              </tr> 
              <tr style="border-collapse:collapse"> 
               <td align="left" style="Margin:0;padding-bottom:15px;padding-top:20px;padding-left:20px;padding-right:20px"> 
