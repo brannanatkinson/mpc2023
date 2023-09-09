@@ -68,7 +68,7 @@
                             
                         </div>
                         <div class="mb-4 text-3xl">
-                            Sales
+                            {{ App\Models\Item::where('statamic_id', $item->id)->sales()->count() }}
                         </div>
                         <div class="mb-8 text-sm">
                             
