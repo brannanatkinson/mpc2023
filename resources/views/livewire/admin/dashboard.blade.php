@@ -68,7 +68,7 @@
                             
                         </div>
                         <div class="mb-4 text-3xl">
-                            {{ App\Models\Item::where('statamic_id', $item->id)->first()->sales()->count() > 0 ? App\Models\Item::where('statamic_id', $item->id)->first()->sales()->quanity : 0  }}
+                            {{ App\Models\Item::where('statamic_id', $item->id)->first()->sales()->count() > 0 ? App\Models\Item::where('statamic_id', $item->id)->first()->sales()->quantity : 0  }}
                         </div>
                         <div class="mb-8 text-sm">
                             
