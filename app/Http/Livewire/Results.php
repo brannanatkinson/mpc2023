@@ -22,7 +22,7 @@ class Results extends Component
             $sponsor_sum += $sponsor->amount;
         }
         $this->sponsor_total = $sponsor_sum;
-        $this->gift_total = Gift::all()->where('created_at', '>', '2023-01-01')->sum('gift_total');
+        $this->gift_total = Gift::where('created_at', '>', '2023-01-01')->sum('gift_total');
         $this->donation_total = GlobalSet::findByHandle('campaign')->inCurrentSite()->get('donations');
         $this->outside_donors = GlobalSet::findByHandle('campaign')->inCurrentSite()->get('donors');
     }
