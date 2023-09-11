@@ -221,6 +221,21 @@
                         </div>
                     {{ /collection:sponsors }}
                 </div>
+
+                <div class="mb-4 text-center font-display text-3xl text-mp-blue-green">In Kind Sponsors</div>
+                <div class="container grid grid-cols-1 md:grid-cols-4 mb-8 gap-8 ">
+                    {{ collection:sponsors sponsor_type:contains="9" sort="order"}}
+                        <div class=" h-64 w-full bg-white ">  
+                            <div class="flex justify-center h-full items-center mb-4">
+                                {{ logo }}    
+                                    <a href="http://{{ sponsor_website }}">
+                                        <img src="{{ url }}" class="object-contain h-64 w-64" alt="">
+                                    </a>
+                                {{ /logo }}
+                            </div>
+                        </div>
+                    {{ /collection:sponsors }}
+                </div>
             </div>
 
             {{ /if }}
