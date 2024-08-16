@@ -23,7 +23,7 @@
                     <div class="mb-4 text-center font-display text-3xl text-mp-blue-green">
                         Giving Catalog Sponsor
                     </div>
-                    {{ collection:sponsors sponsor_type:contains="2" sort="order"  }}
+                    {{ collection:sponsors sponsor_type:contains="2" sort="title"  }}
                         <div>
                             <a href="http://{{ sponsor_website }}" target="_blank">
                                 {{ logo }}
@@ -39,7 +39,7 @@
                         <div class="mb-4 text-center font-display text-3xl text-mp-blue-green">
                             Giving Wall Sponsor
                         </div>
-                        {{ collection:sponsors sponsor_type:contains="3" sort="order"  }}
+                        {{ collection:sponsors sponsor_type:contains="3" sort="title"  }}
                             <a href="http://{{ sponsor_website }}" target="_blank">
                                 {{ logo }}
                                     <img src="{{ url }}" class="w-1/2 mx-auto" alt="">
@@ -55,7 +55,7 @@
                     </div>
                     <div class="container max-w-3xl mx-auto grid mb-8">
                         <div class="flex justify-center">  
-                            {{ collection:sponsors sponsor_type:contains="4" sort="order"}}
+                            {{ collection:sponsors sponsor_type:contains="4" sort="title"}}
                                 <a href="http://{{ sponsor_website }}" target="_blank" class="">
                                     {{ logo }}
                                         <img src="{{ url }}" class="w-1/3 mx-auto" alt="">
@@ -71,7 +71,7 @@
         {{ if {collection:count in="sponsors" sponsor_type:contains="5"} > 0 }}
             <div class="mb-4 text-center font-display text-3xl text-mp-blue-green">Matching Sponsors</div>
             <div class="container grid grid-cols-1 md:grid-cols-4 mb-8 gap-8 ">
-                {{ collection:sponsors sponsor_type:contains="5" sort="order"}}
+                {{ collection:sponsors sponsor_type:contains="5" sort="title"}}
                     <div class=" h-64 w-full bg-white ">  
                         <div class="flex justify-center h-full items-center mb-4">
                             {{ logo }}    
@@ -88,7 +88,7 @@
         {{ if {collection:count in="sponsors" sponsor_type:contains="6"} > 0 }}
             <div class="mb-4 text-center font-display text-2xl text-mp-coral">Advocates of Hope</div>
             <div class="container grid grid-cols-1 md:grid-cols-3 mb-8">
-                {{ collection:sponsors sponsor_type:contains="6" sort="order"}}
+                {{ collection:sponsors sponsor_type:contains="6" sort="title"}}
                     <div class="text-center">
                         {{ title }}
                     </div>
@@ -100,7 +100,7 @@
         {{ if {collection:count in="sponsors" sponsor_type:contains="7"} > 0 }}
             <div class="mb-4 text-center font-display text-2xl text-mp-coral">Bearers of Hope</div>
             <div class="container grid grid-cols-1 md:grid-cols-3 mb-8">
-                {{ collection:sponsors sponsor_type:contains="7" sort="order"}}
+                {{ collection:sponsors sponsor_type:contains="7" sort="title"}}
                     <div class="text-center">
                         {{ title }}
                     </div>
@@ -112,7 +112,7 @@
         {{ if {collection:count in="sponsors" sponsor_type:contains="8"} > 0 }}
             <div class="mb-4 text-center font-display text-2xl text-mp-coral">Supporters of Hope</div>
             <div class="container grid grid-cols-1 md:grid-cols-3 mb-8">
-                {{ collection:sponsors sponsor_type:contains="8" sort="order"}}
+                {{ collection:sponsors sponsor_type:contains="8" sort="title"}}
                     <div class="text-center">
                         {{ title }}
                     </div>
