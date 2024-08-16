@@ -6,11 +6,22 @@
             <img src="{{ url }} " class="h-32 z-20" alt="">
          {{ /giving_wall_icon }}
          {{ giving_wall_name }}
-            <img src="{{ url }}" class="h-32 md:h-40 md:self-center -mt-8 md:mt-0 " alt="">
+            <img src="{{ url }}" class="h-32 md:h-32 md:self-center -mt-8 md:mt-0 " alt="">
         {{ /giving_wall_name }}
-        {{ giving_wall_sponsor }}
-            <img src="{{ url }}" class="h-24 md:h-24 self-center z-10 -mt-8 md:mt-0 md:self-center" alt="">
-        {{ /giving_wall_sponsor }}
+        <div class="flex-col justify-center px-4">
+            <div class="text-center">
+                Sponsored By
+            </div>
+            {{ collection:sponsors sponsor_type:contains="3" sort="order"  }}
+                <div class="pb-4">
+                    <a href="http://{{ sponsor_website }}" target="_blank">
+                        {{ logo }}
+                            <img src="{{ url }}" class="w-48 mx-auto" alt="">
+                        {{ /logo }}
+                    </a>
+                </div>
+            {{ /collection:sponsors }}
+        </div>
     </div>
 
      <div class="py-12">

@@ -2,15 +2,29 @@
 
     <!-- Banner in Three parts -->
     <div class="max-w-4xl mx-auto mb-8 flex flex-col items-center md:flex-row md:justify-center">
-        {{ giving_catalog_icon }}
-            <img src="{{ url }} " class="h-32 z-20" alt="">
-         {{ /giving_catalog_icon }}
-         {{ giving_catalog_name }}
-            <img src="{{ url }}" class="h-32 md:h-40 md:self-center -mt-8 md:mt-0 " alt="">
-        {{ /giving_catalog_name }}
-        {{ giving_catalog_sponsor }}
-            <img src="{{ url }}" class="h-24 md:h-24 self-center z-10 -mt-8 md:mt-0 md:self-center" alt="">
-        {{ /giving_catalog_sponsor }}
+
+            {{ giving_catalog_icon }}
+                <img src="{{ url }} " class="h-32 z-20" alt="">
+            {{ /giving_catalog_icon }}
+
+            {{ giving_catalog_name }}
+                <img src="{{ url }}" class="h-32 md:h-40 md:self-center -mt-8 md:mt-0 " alt="">
+            {{ /giving_catalog_name }}
+
+        <div class="flex-col justify-center px-4">
+            <div class="text-center">
+                Sponsored By
+            </div>
+            {{ collection:sponsors sponsor_type:contains="2" sort="order"  }}
+                <div class="pb-4">
+                    <a href="http://{{ sponsor_website }}" target="_blank">
+                        {{ logo }}
+                            <img src="{{ url }}" class="w-48 mx-auto" alt="">
+                        {{ /logo }}
+                    </a>
+                </div>
+            {{ /collection:sponsors }}
+        </div>
     </div>
 
     <!-- New Beginnings Category -->

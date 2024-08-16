@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire\Admin\Hosts;
+namespace App\Livewire\Admin\Hosts;
 
 use Livewire\Component;
 use App\Models\User;
@@ -81,6 +81,9 @@ class UpdateHostForm extends Component
 
     public function saveUserGoal()
     {
+        if ( $this->goal == null ){
+            $this->goal = 0;
+        }
         $meta = DB::table('user_metas')
             ->where('user_id', '=', auth()->user()->id )
             ->update([

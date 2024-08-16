@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{{ title ?? site:name }} - Housing Hope 2023 - The Mary Parrish Center</title>
+        <title>{{ title ?? site:name }} - Housing Hope {{? echo date('Y') ?}} - The Mary Parrish Center</title>
        {{ vite src="resources/css/app.css" }} 
         {{ livewire:styles }}
         <script src="https://kit.fontawesome.com/556cea7374.js" crossorigin="anonymous"></script>
@@ -24,7 +24,7 @@
         
         <script async src="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.js"></script>
         <div hidden id="snipcart" data-api-key="{{ config:app:snipcart }}"></div>
-        <script src="//unpkg.com/alpinejs" defer></script>
+        <!-- <script src="//unpkg.com/alpinejs" defer></script> -->
          <script>
             document.addEventListener('snipcart.ready', () => {
               Snipcart.events.on('cart.confirmed', (cartConfirmResponse) => {

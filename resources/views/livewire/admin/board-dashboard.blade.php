@@ -4,7 +4,7 @@
     </x-slot>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Housing Hope 2023 Dashboard') }}
+            {{ __('Housing Hope Board Dashboard') }}
         </h2>
     </x-slot>
 
@@ -27,7 +27,7 @@
                     Total Raised by Hosts
                 </div>
                 <div class="mb-8 text-4xl font-bold">
-                    ${{ App\Models\Gift::where('user_id','!=', null)->where('created_at', '>', '2023-01-01')->sum('gift_total') }}
+                    ${{ App\Models\Gift::where('user_id','!=', null)->where('created_at', '>', date('Y').'-01-01')->sum('gift_total') }}
                 </div>
              </div>
              <div class="p-8 text-center bg-gray-200 rounded-md flex flex-col justify-center items-center">
@@ -35,7 +35,7 @@
                     Total Gifts by Hosts
                 </div>
                 <div class="mb-8 text-4xl font-bold">
-                    {{ App\Models\Gift::where('user_id','!=', null)->where('created_at', '>', '2023-01-01')->count() }}
+                    {{ App\Models\Gift::where('user_id','!=', null)->where('created_at', '>', date('Y').'-01-01')->count() }}
                 </div>
              </div>
             <div><!-- blank  --></div>
@@ -47,8 +47,8 @@
             <div class=" font-bold">Total Items</div>
             @foreach( $hosts as $host )
             <div class=" col-span-2">{{ $host->name }}</div>
-            <div class="">${{ App\Models\Gift::where('user_id', '=', $host->id )->where('created_at', '>', '2023-01-01')->sum('gift_total') }}</div>
-            <div class="">{{ App\Models\Gift::where('user_id', '=', $host->id )->where('created_at', '>', '2023-01-01')->count() }}</div>
+            <div class="">${{ App\Models\Gift::where('user_id', '=', $host->id )->where('created_at', '>', date('Y').'-01-01')->sum('gift_total') }}</div>
+            <div class="">{{ App\Models\Gift::where('user_id', '=', $host->id )->where('created_at', '>', date('Y').'-01-01')->count() }}</div>
             <div class="">{{ $host->items->sum('pivot.item_quantity') }}</div>
             @endforeach
         </div>
@@ -72,7 +72,7 @@
             <div class=" font-bold">Credited Host</div>
             <!-- add purchase date  -->
             <div class=""></div>
-            @foreach( App\Models\Gift::orderBy('gift_total', 'DESC')->where('created_at', '>', '2023-01-01')->get() as $gift )
+            @foreach( App\Models\Gift::orderBy('gift_total', 'DESC')->where('created_at', '>', date('Y').'-01-01')->get() as $gift )
             <div class=" col-span-2">{{ $gift->donor->full_name }}</div>
             <div class="">${{ $gift->gift_total }}</div>
             <div class="">

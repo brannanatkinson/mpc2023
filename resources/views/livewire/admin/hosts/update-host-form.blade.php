@@ -24,7 +24,7 @@
             <div class="mb-4 flex flex-col">
                 <label class="mb-4">Add a photo that will show on your public profile. Your photo must be a JPG, JPEG, or PNG that is less than 1MB in size.</label>
                 @error('image') <div class="pb-4"><span class="text-red-500">{{ $message }}</span></div> @enderror
-                <input type="file" wire:model="image"  >
+                <input type="file" wire:model.live="image"  >
             </div>
             <button wire:click.prevent="saveUserPhoto" class="mb-8 px-4 py-3 text-white bg-mp-blue-green">Save Your Photo</button>
             <div>
@@ -34,20 +34,21 @@
         <div class="mt-4 mb-12 p-8 bg-white">
             <div class="text-2xl">Show Host Totals</div>
             <p class="mb-4">This will show total amount of donations where users have credited you as the virtual hosts</p>
-            <input class="h-8 w-8" wire:click.prevent="saveUserShowTotal" value="{{ $show_total }}" wire:model="show_total" type="checkbox">
+            <input class="h-8 w-8" wire:click.prevent="saveUserShowTotal" wire:model.live="show_total" type="checkbox" @php echo $show_total == 1 ? 'checked' : ''; @endphp>
+            
             <label for="">Check to show donation total</label>
         </div>
         <div class="mb-12 p-8 bg-white">
             <div class="text-2xl">Add a Goal</div>
-            <p class="mb-4">Enter an amount if you would like to set a goal. Please leave blank if you don't want to set a goal.</p>
+            <p class="mb-4">Enter an amount if you would like to set a goal. Please leave blank if you do not want to set a goal.</p>
             <div class="mb-4">
                 <label for="">Enter your goal amount $</label>
-                <input type="number" class="border border-2 py-2 px-3 bg-gray-50" wire:model="goal"><br/>
+                <input type="number" class="border border-2 py-2 px-3 bg-gray-50" wire:model.live="goal"><br/>
             </div>
             @if ( $goal != null OR $goal != 0 )
             <div class="mb-4">
-                <input class="h-8 w-8" type="checkbox" wire:click.prevent="saveUserShowGoal" value="{{ $show_goal }}" wire:model="show_goal">
-                <label class="" for="">Check to show you goal on your public page. Your goal will remoain private if you don't check this box.</label>
+                <input class="h-8 w-8" type="checkbox" wire:click.prevent="saveUserShowGoal" wire:model.live="show_goal" @php echo $show_goal == 1 ? 'checked' : ''; @endphp>
+                <label class="" for="">Check to show you goal on your public page. Your goal will remoain private if you don not check this box.</label>
             </div>
             @endif
             <button wire:click.prevent="saveUserGoal" class="px-4 py-3 text-white bg-mp-blue-green">Save Goal</button>
@@ -55,17 +56,17 @@
         <div class="mb-12 p-8 bg-white">
             <div class="text-2xl">Show Donated Items</div>
             <p class="mb-4">This option will show users the items that people have donated when crediting you as the host.</p>
-            <input class="h-8 w-8" type="checkbox" wire:click.prevent="saveUserShowItems" value="{{ $show_items }}" wire:model="show_items">
+            <input class="h-8 w-8" type="checkbox" wire:click.prevent="saveUserShowItems" wire:model.live="show_items" @php echo $show_items == 1 ? 'checked' : ''; @endphp>
             <label for="">Check to show items</label>
         </div>
         <div class="mb-12 p-8 bg-white">
             <div class="text-2xl">Show Reason for Supporting Housing Hope</div>
             <p class="mb-4">Write a statement about why you support The Mary Parrish Center or any message you want visitiors to see.</p>
             <div class="mb-4">
-                <input class="h-8 w-8" type="checkbox" wire:click.prevent="saveUserShowRationale" value="{{ $show_rationale }}" wire:model="show_rationale">
+                <input class="h-8 w-8" type="checkbox" wire:click.prevent="saveUserShowRationale" wire:model.live="show_rationale" @php echo $show_rationale == 1 ? 'checked' : ''; @endphp
                 <label for="">Show your message of support on your public page</label>
             </div>
-            <textarea class="w-full border border-2 py-2 px-3 bg-gray-50" rows="7" wire:model="rationale"></textarea>
+            <textarea class="w-full border border-2 py-2 px-3 bg-gray-50" rows="7" wire:model.live="rationale"></textarea>
             <button wire:click.prevent="saveUserRationale" class="px-4 py-3 text-white bg-mp-blue-green">Save Message</button>
         </div>
         <div class="mb-12 p-8 bg-white">
@@ -77,11 +78,11 @@
             @else
                 <div class="mb-4">
                     <label for="">New Password</label><br/>
-                    <input type="password" class="border border-2 py-2 px-3 bg-gray-50" wire:model="password">
+                    <input type="password" class="border border-2 py-2 px-3 bg-gray-50" wire:model.live="password">
                 </div>
                 <div class="mb-4">
                     <label for="">Confirm Password</label><br/>
-                    <input type="password" class="border border-2 py-2 px-3 bg-gray-50" wire:model="password_confirmation">
+                    <input type="password" class="border border-2 py-2 px-3 bg-gray-50" wire:model.live="password_confirmation">
                 </div>
                 <button wire:click.prevent="saveNewPassword" class="px-4 py-3 text-white bg-mp-blue-green">Save Message</button>
             @endif

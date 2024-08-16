@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace App\Livewire;
 
 use Livewire\Component;
 use Illuminate\Support\Facades\Http;
@@ -21,7 +21,7 @@ class ItemButton extends Component
     */
     public $itemName;
     public $itemId;
-    public $itemExcept;
+    public $itemExcerpt;
     public $itemHosts;
     public $itemPrice;
     public $itemUrl;

@@ -1,13 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Livewire\Admin\Dashboard;
-use App\Http\Livewire\Admin\BoardDashboard;
-use App\Http\Livewire\Admin\Hosts\AllHosts;
-use App\Http\Livewire\Admin\Hosts\UpdateHostForm;
-use App\Http\Livewire\Hosts\HostPublicPage;
-use App\Http\Livewire\WebhookConfirmation;
-use App\Http\Livewire\OrderConfirmation;
+use App\Livewire\Admin\Dashboard;
+use App\Livewire\Admin\BoardDashboard;
+use App\Livewire\Admin\Hosts\AllHosts;
+use App\Livewire\Admin\Hosts\UpdateHostForm;
+use App\Livewire\Hosts\HostPublicPage;
+use App\Livewire\WebhookConfirmation;
+use App\Livewire\OrderConfirmation;
 use App\Http\Controllers\DbApi;
 use Illuminate\Support\Facades\Http;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire\Admin\Hosts;
+namespace App\Livewire\Admin\Hosts;
 
 use Livewire\Component;
 use App\Models\Host;

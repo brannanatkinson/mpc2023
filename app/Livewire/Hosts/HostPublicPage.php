@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire\Hosts;
+namespace App\Livewire\Hosts;
 use Artesaos\SEOTools\Facades\SEOTools;
 use Artesaos\SEOTools\Facades\OpenGraph;
 

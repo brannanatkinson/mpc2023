@@ -13,7 +13,7 @@
         <script src="https://kit.fontawesome.com/556cea7374.js" crossorigin="anonymous"></script>
 
         <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+        @vite(['resources/css/app.css'])
 
         <!-- Styles -->
         @livewireStyles

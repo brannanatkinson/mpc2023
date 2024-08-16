@@ -6,12 +6,12 @@
         <div class="grid md:grid-cols-4 gap-8 mb-8">
             <div class="flex flex-col p-8 text-center text-white bg-mp-coral rounded-lg shadow-md">
                 <div class="mb-6 font-display"><i class="fa fa-star fa-2x"></i></div>
-                <div class="mb-6 text-5xl font-bold">{{ App\Models\Gift::where('created_at', '>', '2023-01-01')->get()->count() + $outside_donors }}</div>
+                <div class="mb-6 text-5xl font-bold">{{ App\Models\Gift::where('created_at', '>', date('Y').'-01-01')->get()->count() + $outside_donors }}</div>
                 <div class="mb-4 text-xl uppercase">Donors</div>
             </div>
             <div class="flex flex-col p-8 text-center text-white bg-mp-light-lime rounded-lg shadow-md">
                 <div class="mb-6 font-display"><i class="fa fa-gift fa-2x"></i></div>
-                <div class="mb-6 text-5xl font-bold">{{ DB::table('gift_item')->select(DB::raw('SUM(item_quantity) as quantity'))->where('created_at', '>', '2023-01-01')->first()->quantity }}</div>
+                <div class="mb-6 text-5xl font-bold">{{ DB::table('gift_item')->select(DB::raw('SUM(item_quantity) as quantity'))->where('created_at', '>', date('Y').'-01-01')->first()->quantity }}</div>
                 <div class="mb-4 text-xl uppercase">Items Given</div>
             </div>
             <div class="flex flex-col p-8 text-center text-white bg-mp-blue-green rounded-lg shadow-md">
