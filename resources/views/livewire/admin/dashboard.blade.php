@@ -69,7 +69,8 @@
                                 
                             </div>
                             <div class="mb-4 text-3xl">
-                            @php ray( App\Models\Item::where('statamic_id', $item->id)->first()->sales()->count() ) @endphp
+                            @php ray( App\Models\Item::where('statamic_id', $item->id)->first()->sales() ) @endphp
+                            {{ App\Models\Item::where('statamic_id', $item->id)->first()->sales()->count() > 0 ? App\Models\Item::where('statamic_id', $item->id)->first()->sales()->first()->quantity : 0  }}
                             
                             
                             </div>

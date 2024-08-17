@@ -20,7 +20,7 @@ class Dashboard extends Component
             ->where('collection','items')
             ->whereStatus('published')
             ->get();
-
+        dd( $gift_items );
         $hosts = User::permission('edit host')
             ->orderBy('name')
             ->whereHas('campaigns', function( Builder $query){
