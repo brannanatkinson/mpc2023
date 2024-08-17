@@ -60,7 +60,7 @@
                 </div>
                 <div class="mb-6 grid grid-cols-4 gap-6">
                     @foreach ( $gift_items as $item )
-                        @php ray( $item ) @endphp
+                        
                         <div class="bg-white text-center flex flex-col rounded-md overflow-hidden">
                             <div class="mb-6 w-full">
                             
@@ -69,7 +69,9 @@
                                 
                             </div>
                             <div class="mb-4 text-3xl">
-                                
+                            @php ray( App\Models\Item::where('statamic_id', $item->id)->first()->sales()->count() ) @endphp
+                            
+                            
                             </div>
                             <div class="mb-8 text-sm">
                                 @if( $item->item_sponsor->count() > 0 )
