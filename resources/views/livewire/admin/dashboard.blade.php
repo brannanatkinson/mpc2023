@@ -69,7 +69,7 @@
                                 
                             </div>
                             <div class="mb-4 text-3xl">
-                            @php ray( App\Models\Item::where('statamic_id', $item->id)->first()->sales()->count() ) @endphp
+                            @php ray( App\Models\Item::where('statamic_id', $item->id)->first() ) @endphp
                             
                             
                             </div>
