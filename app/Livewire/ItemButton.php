@@ -29,7 +29,7 @@ class ItemButton extends Component
 
     public function mount( $item )
     {
-        dd( (env('APP_URL').'/api/collections/items/entries/' . $item) );
+        ray( (env('APP_URL').'/api/collections/items/entries/' . $item) );
         $response = Http::get(env('APP_URL').'/api/collections/items/entries/' . $item);
         $result = json_decode($response);
         $this->itemId = $result->data->id;
