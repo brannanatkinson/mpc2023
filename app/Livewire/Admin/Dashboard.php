@@ -22,7 +22,7 @@ class Dashboard extends Component
             ->get();
         foreach ( $gift_items as $gift )
         {
-            ray( Item::where('statamic_id', $gift->id)->first()->sales()->count() );
+            ray( Item::where('statamic_id', $gift->id)->first()->statamic_id, Item::where('statamic_id', $gift->id)->first()->sales()->count() );
         }
         dd( $gift_items );
         $hosts = User::permission('edit host')
