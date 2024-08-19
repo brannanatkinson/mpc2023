@@ -19,7 +19,7 @@ class Dashboard extends Component
         $gift_items = Entry::query()
             ->where('collection','items')
             ->whereStatus('published')
-            ->orderBy('statamic_id', 'desc')
+            ->orderBy('order', 'asc')
             ->get();
 
         $hosts = User::permission('edit host')

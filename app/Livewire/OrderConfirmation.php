@@ -13,8 +13,10 @@ class OrderConfirmation extends Component
     public $nameConfirmation = 0;
     public $hostConfirmation = 0;
     
+    
     public function mount($order_token)
     {
+        dd ( $order_token );
         $this->gift = Gift::where('order_token', '=', $order_token)->first();
         $this->showNameOnWall = Donor::where('gift_id', '=', $this->gift->id)->first()->showNameOnWall;
         $this->note = Donor::where('gift_id', '=', $this->gift->id)->first()->note;

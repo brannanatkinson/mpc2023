@@ -47,11 +47,12 @@ class WebhookConfirmation extends Component
             'user_id' => $userId,
         ]);
 
+
         Mail::to( $this->result['content']['email'] )->send(new OrderConfirmation($gift));
 
         $donor->gift_id = $gift->id;
         $donor->save();
-
+        ray ( $donor );
         // send Donor thank you email
 
         foreach ( $this->result['content']['items'] as $newItem )
@@ -68,7 +69,6 @@ class WebhookConfirmation extends Component
         if ( $userId != null ){
              Mail::to( $userEmail )->send(new HostCredited($gift));
         }
-
     }
 
     public function render()
