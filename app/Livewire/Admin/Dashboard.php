@@ -22,11 +22,7 @@ class Dashboard extends Component
             ->orderBy('statamic_id', 'desc')
             ->get();
             dump( $gift_items );
-        foreach ( $gift_items as $gift )
-        {
-            ray( Item::where('statamic_id', $gift->id)->first()->statamic_id, Item::where('statamic_id', $gift->id)->first()->name, Item::where('statamic_id', $gift->id)->first()->sales()->count() );
-        }
-        dd( $gift_items );
+       
         $hosts = User::permission('edit host')
             ->orderBy('name')
             ->whereHas('campaigns', function( Builder $query){
