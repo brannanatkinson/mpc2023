@@ -19,7 +19,7 @@ class Dashboard extends Component
         $gift_items = Entry::query()
             ->where('collection','items')
             ->whereStatus('published')
-            ->orderBy('title', 'asc')
+            ->orderBy('statamic_id', 'asc')
             ->get();
         foreach ( $gift_items as $gift )
         {
