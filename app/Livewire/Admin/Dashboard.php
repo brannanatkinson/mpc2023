@@ -21,8 +21,7 @@ class Dashboard extends Component
             ->whereStatus('published')
             ->orderBy('statamic_id', 'desc')
             ->get();
-            dump( $gift_items );
-       
+
         $hosts = User::permission('edit host')
             ->orderBy('name')
             ->whereHas('campaigns', function( Builder $query){

@@ -39,6 +39,7 @@ class Item extends Model
             ->select('items.name as item_name', DB::raw('SUM(gift_item.item_quantity) as quantity') )
             ->groupBy('items.name')
             ->where('items.id', '=', $this->id )
+            ->where('gift_item.created_at', '>', date('Y').'-01-01')
             ->get();
         return $sales;
     }
