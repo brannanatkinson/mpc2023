@@ -20,6 +20,10 @@ class Dashboard extends Component
             ->where('collection','items')
             ->whereStatus('published')
             ->get();
+        foreach ( $gift_items as $gift )
+        {
+            ray( Item::where('statamic_id', $gift->id)->first()->sales()->count() );
+        }
         dd( $gift_items );
         $hosts = User::permission('edit host')
             ->orderBy('name')
