@@ -74,10 +74,14 @@
                 {{ collection:sponsors sponsor_type:contains="5" sort="title"}}
                     <div class=" h-64 w-full bg-white ">  
                         <div class="flex justify-center h-full items-center mb-4">
-                            {{ logo }}    
+                            {{ logo }} 
+                                {{ if sponsor_website }}   
                                 <a href="http://{{ sponsor_website }}">
                                     <img src="{{ url }}" class="object-contain h-64 w-64" alt="">
                                 </a>
+                                {{ else }}
+                                    <img src="{{ url }}" class="object-contain h-64 w-64" alt="">
+                                {{ endif }}
                             {{ /logo }}
                         </div>
                     </div>
