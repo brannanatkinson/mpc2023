@@ -59,8 +59,8 @@
                     </div>
                 @endif
             </div>
-            
-            @if ( $user->UserMeta->show_rationale === true )
+                        
+            @if ( $user->UserMeta->show_rationale === 1 )
             <div class="mb-16 bg-white rounded-md">
                 <div class="mb-8 text-3xl text-center">Why I'm supporting Housing Hope</div>
                 <p class="text-xl">

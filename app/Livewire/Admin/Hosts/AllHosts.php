@@ -48,7 +48,7 @@ class AllHosts extends Component
         $user = User::create([
             'name' => $this->name,
             'email' => $this->email,
-            'password' => Hash::make( 'ILoveHousingHope' ),
+            'password' => Hash::make( 'WeLoveHousingHope' ),
             'host_url' => strtolower( preg_replace('/[[:space:]]+/', '-', $this->name) ),
         ]);
         $user->assignRole('host');

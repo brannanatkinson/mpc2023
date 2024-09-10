@@ -14,7 +14,6 @@ class HostPublicPage extends Component
     public function mount($url)
     {
         $this->user = User::where('host_url', '=', $url)->first();
-        ray ( $this->user );
         session([ 'host' => $this->user->name ]);
         OpenGraph::setDescription('Please help support Housing Hope, a fundraiser benefitting The Mary Parrish Center');
         OpenGraph::setTitle( $this->user->name . ' Supports Housing Hope' );
