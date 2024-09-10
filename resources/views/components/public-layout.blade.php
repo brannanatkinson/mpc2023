@@ -32,7 +32,7 @@
     <body>
         <x-public-navigation/>
         {{ $slot }}
-    <div class="py-12 bg-mp-navy text-white text-sm text-center">Housing Hope Nashville - &copy; {{? echo date('Y') ?}} The Mary Parrish Center - Photo Credit: Peyton Hoge - Website Development: Amy Atkinson Communications</div>
+    <div class="py-12 bg-mp-navy text-white text-sm text-center">Housing Hope Nashville - &copy; {{ date('Y') }} The Mary Parrish Center - Photo Credit: Peyton Hoge - Website Development: Amy Atkinson Communications</div>
     <script async src="https://cdn.snipcart.com/themes/v3.2.1/default/snipcart.js"></script>
     <div hidden id="snipcart" data-api-key="{{ env('SNIPCART_KEY') }}"></div>
     @livewireScripts
