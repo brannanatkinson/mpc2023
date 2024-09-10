@@ -12,7 +12,7 @@ class DonorWall extends Component
     public function mount()
     {
         $this->donorsForWall = Donor::where('showNameOnWall', '=', 1)
-            ->where('created_at', '>', '2023-01-01')
+            ->where('created_at', '>', date('Y').'-01-01')
             ->orderBy('full_name')
             ->get();
     }
