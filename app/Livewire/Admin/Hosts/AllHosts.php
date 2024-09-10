@@ -68,6 +68,8 @@ class AllHosts extends Component
     public function sendInviteEmail( $id )
     {
         $user = User::where('id', '=', $id)->first();
+        $user->password = Hash::make( 'WeLoveHousingHope' );
+        $user->save();
         Mail::to( $user->email )->send(new NewHost( $user ));
         $year = date('Y');
         $user->campaigns()->attach( Campaign::where('year', '=', $year)->get() );
@@ -77,6 +79,8 @@ class AllHosts extends Component
     public function resendInviteEmail( $id )
     {
         $user = User::where('id', '=', $id)->first();
+        $user->password = Hash::make( 'WeLoveHousingHope' );
+        $user->save();
         Mail::to( $user->email )->send(new NewHost( $user ));
         $this->mount();
 
