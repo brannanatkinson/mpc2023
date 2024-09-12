@@ -37,7 +37,6 @@ class UpdateDatabase extends Command
         */
         $response = Http::get(env('APP_URL').'/api/taxonomies/items/terms');
         $result = json_decode($response);
-        ray( $result );
         $terms = '';
         foreach( $result->data as $term){
             $category = Category::updateOrCreate(
