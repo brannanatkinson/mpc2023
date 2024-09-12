@@ -28,7 +28,7 @@ use Illuminate\Support\Facades\Http;
 //     return view('welcome');
 // });
 
-Route::statamic('uri', 'view');
+//Route::statamic('uri', 'view');
 
 
 Route::middleware([
@@ -36,18 +36,19 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
-    // Route::get('/dashboard', Dashboard::class)->middleware(['auth:sanctum', 'verified'])->name('dashboard');
-    // Route::get('/admin/hosts', AllHosts::class)->middleware(['auth:sanctum', 'verified', 'can:admin'])->name('admin.hosts');
-    // Route::get('/admin/hosts/passwordreset', AllHosts::class)->middleware(['auth:sanctum', 'verified', 'can:admin'])->name('admin.password');
-    // Route::get('/update/host', UpdateHostForm::class)->middleware(['auth:sanctum', 'verified', 'can:edit host'])->name('admin.update.hosts');
-// Routes to update statamic Categories, Items, and Sponsors
-    // Route::get('/admin/statamic', [DbApi::class, 'index']);
+    Route::get('/dashboard', Dashboard::class)->middleware(['auth:sanctum', 'verified'])->name('dashboard');
+    Route::get('/admin/hosts', AllHosts::class)->middleware(['auth:sanctum', 'verified', 'can:admin'])->name('admin.hosts');
+    Route::get('/admin/hosts/passwordreset', AllHosts::class)->middleware(['auth:sanctum', 'verified', 'can:admin'])->name('admin.password');
+    Route::get('/update/host', UpdateHostForm::class)->middleware(['auth:sanctum', 'verified', 'can:edit host'])->name('admin.update.hosts');
+    
+    // Routes to update statamic Categories, Items, and Sponsors
+    Route::get('/admin/statamic', [DbApi::class, 'index']);
 });
-// Route::get('/hosts/{url}', HostPublicPage::class);
-// Route::get('/mpc-board-dashboard', BoardDashboard::class);
+Route::get('/hosts/{url}', HostPublicPage::class);
+Route::get('/mpc-board-dashboard', BoardDashboard::class);
 
-// Route::post('/webhook', WebhookConfirmation::class);
-// Route::get('/thankyou/{order_token}', OrderConfirmation::class);
+Route::post('/webhook', WebhookConfirmation::class);
+Route::get('/thankyou/{order_token}', OrderConfirmation::class);
 
 
 
