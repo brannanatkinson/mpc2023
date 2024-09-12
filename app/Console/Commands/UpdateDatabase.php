@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands;
 
+use Illuminate\Support\Facades\Config;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Http;
 use App\Models\Category;
@@ -35,9 +36,8 @@ class UpdateDatabase extends Command
         |--------------------------------------------------------------------------
         |
         */
-        $response = Http::get(env('APP_URL').'/api/taxonomies/items/terms');
+        $response = Http::get(Config::get('app.url').'/api/taxonomies/items/terms');
         $result = json_decode($response);
-        dd($result->data);
         $terms = '';
         foreach( $result->data as $term){
             $category = Category::updateOrCreate(
@@ -58,7 +58,7 @@ class UpdateDatabase extends Command
         | Gets Items collection from Statamic and pushes updates to DB
         |
         */
-        $response = Http::get(env('APP_URL').'/api/collections/items/entries');
+        $response = Http::get(Config::get('app.url').'/api/collections/items/entries');
         $result = json_decode($response);
         foreach( $result->data as $item){
             $item = Item::updateOrCreate(
@@ -82,7 +82,7 @@ class UpdateDatabase extends Command
         | Gets Sponsors Collection and pushes updates to DB
         |
         */    
-        $response = Http::get(env('APP_URL').'/api/collections/sponsors/entries');
+        $response = Http::get(Config::get('app.url').'/api/collections/sponsors/entries');
         $result = json_decode($response);
         foreach( $result->data as $sponsor){
             $sponsor = Sponsor::updateOrCreate(
@@ -105,7 +105,7 @@ class UpdateDatabase extends Command
         | Sponsor id and adds it to the sponsor_id in Items
         |
         */    
-        $response = Http::get(env('APP_URL').'/api/collections/items/entries');
+        $response = Http::get(Config::get('app.url').'/api/collections/items/entries');
         $result = json_decode($response);
         $items_dd = [];
         foreach( $result->data as $item){
