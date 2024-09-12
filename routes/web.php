@@ -24,9 +24,9 @@ use Illuminate\Support\Facades\Http;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 //Route::statamic('uri', 'view');
 
