@@ -28,7 +28,7 @@ use Illuminate\Support\Facades\Http;
 //     return view('welcome');
 // });
 
-Route::statamic('uri', 'view');
+// Route::statamic('uri', 'view');
 
 
 Route::middleware([
