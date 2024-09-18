@@ -52,7 +52,6 @@ class WebhookConfirmation extends Component
 
         $donor->gift_id = $gift->id;
         $donor->save();
-        ray ( $donor );
         // send Donor thank you email
 
         foreach ( $this->result['content']['items'] as $newItem )
