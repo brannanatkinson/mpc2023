@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use Illuminate\Support\Facades\Config;
 use Livewire\Component;
 use Illuminate\Support\Facades\Http;
 use App\Models\Item;
@@ -29,7 +30,7 @@ class ItemButton extends Component
 
     public function mount( $item )
     {
-        $response = Http::get(env('APP_URL').'/api/collections/items/entries/' . $item);
+        $response = Http::get(Config::get('app.url').'/api/collections/items/entries/' . $item);
         $result = json_decode($response);
         $this->itemId = $result->data->id;
         $this->itemName = $result->data->title;
