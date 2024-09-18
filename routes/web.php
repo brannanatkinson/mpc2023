@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Livewire\Admin\Dashboard;
 use App\Livewire\Admin\BoardDashboard;
+use App\Livewire\Admin\SponsorList;
 use App\Livewire\Admin\Hosts\AllHosts;
 use App\Livewire\Admin\Hosts\UpdateHostForm;
 use App\Livewire\Hosts\HostPublicPage;
@@ -38,6 +39,7 @@ Route::middleware([
 ])->group(function () {
     Route::get('/dashboard', Dashboard::class)->middleware(['auth:sanctum', 'verified'])->name('dashboard');
     Route::get('/admin/hosts', AllHosts::class)->middleware(['auth:sanctum', 'verified', 'can:admin'])->name('admin.hosts');
+     Route::get('/admin/sponsors', SponsorList::class)->middleware(['auth:sanctum', 'verified', 'can:admin'])->name('admin.hosts');
     Route::get('/admin/hosts/passwordreset', AllHosts::class)->middleware(['auth:sanctum', 'verified', 'can:admin'])->name('admin.password');
     Route::get('/update/host', UpdateHostForm::class)->middleware(['auth:sanctum', 'verified', 'can:edit host'])->name('admin.update.hosts');
     
