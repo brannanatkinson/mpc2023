@@ -12,7 +12,9 @@ export default {
         './resources/views/**/*.antlers.html',
         './resources/views/templates/**/*.antlers.html',
     ],
-
+    corePlugins: {
+       preflight: false,
+    },
     theme: {
         extend: {
             fontFamily: {

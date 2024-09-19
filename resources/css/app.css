@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import 'preflight.css';
 
 @tailwind base;
 @tailwind components;
@@ -15,6 +16,7 @@
   p { 
     @apply mb-4
   }
+
   
 }
 
@@ -50,6 +52,9 @@
   .table-body-cell{
     display: table-cell;
     @apply py-4;
+  }
+  .snipcart-button-primary .snipcart-base-button {
+    @apply bg-blue-700;
   }
   @variants responsive {
     .masonry {
