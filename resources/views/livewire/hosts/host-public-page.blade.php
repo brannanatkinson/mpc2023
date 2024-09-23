@@ -15,7 +15,7 @@
                     </div>
                     
                     <div class="mb-12 text-6xl text-center text-mp-blue-green font-display">
-                        ${{ App\Models\Gift::where('user_id', '=', $user->id )->sum('gift_total') }}
+                        ${{ App\Models\Gift::where('user_id', '=', $user->id )->where('created_at', '>', date('Y').'-01-01')->sum('gift_total') }}
                     </div>
                 @endif
                 <div class="mb-12">
