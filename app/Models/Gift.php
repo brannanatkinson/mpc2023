@@ -17,7 +17,7 @@ class Gift extends Model
 
     public function totalDonations()
     {
-        return Gift::all()->withSum('order_total');
+        return Gift::where('created_at', '>', date('Y').'-01-01')->sum('gift_total');
     }
 
     public function donor(){
