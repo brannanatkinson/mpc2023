@@ -3,7 +3,6 @@
         data-item-id="{{ $itemName }}"
         data-item-price="{{ $itemPrice }}"
         data-item-url="{{ $itemUrl }}"
-        data-item-description="{{ $itemExcerpt }}"
         data-item-name="{{ $itemName }}"
         data-item-custom1-name="Credit your virtual host"
         data-item-custom1-options="{{ $itemHosts }}"
