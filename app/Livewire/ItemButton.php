@@ -34,9 +34,10 @@ class ItemButton extends Component
         $result = json_decode($response);
         $this->itemId = $result->data->id;
         $this->itemName = $result->data->title;
+
+
         $this->itemPrice = $result->data->price;
         $this->itemUrl = $result->data->url;
-        ray( $result->data->excerpt);
 
         $hostNames = '--|';
         $hosts = User::permission('edit host')
