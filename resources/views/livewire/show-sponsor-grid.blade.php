@@ -42,7 +42,7 @@
                         {{ collection:sponsors sponsor_type:contains="3" sort="title"  }}
                             <a href="http://{{ sponsor_website }}" target="_blank">
                                 {{ logo }}
-                                    <img src="{{ url }}" class="w-1/2 mx-auto" alt="">
+                                    <img src="{{ url }}" class="w-1/2 mx-auto mb-6" alt="">
                                 {{ /logo }}
                             </a>
                         {{ /collection:sponsors }}
@@ -62,7 +62,7 @@
                                         <img src="{{ url }}" class="w-1/2 mx-auto" alt="">
                                     {{ /logo }}
                                 </a>
-                            <div>
+                            </div>
                             {{ /collection:sponsors }}
                         </div>
                     </div>
