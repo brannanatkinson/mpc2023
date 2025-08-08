@@ -8,9 +8,14 @@
          {{ giving_wall_name }}
             <img src="{{ url }}" class="h-32 md:h-32 md:self-center -mt-8 md:mt-0 " alt="">
         {{ /giving_wall_name }}
+
+        {{ if [collection:sponsors sponsor_type:contains="3"] > 1 }}
+            {{ brannan = 'true' }}
+        {{ /if }}
+
         <div class="flex-col justify-center px-4">
             <div class="text-center">
-                Sponsored By
+                Sponsored By {{ Brannan }}
             </div>
             {{ collection:sponsors sponsor_type:contains="3" sort="title"  }}
                 <div class="pb-4">
