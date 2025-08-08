@@ -9,21 +9,22 @@
             <img src="{{ url }}" class="h-32 md:h-32 md:self-center -mt-8 md:mt-0 " alt="">
         {{ /giving_wall_name }}
 
-        {{ if  {collection:sponsors sponsor_type:contains="3"} | count > 1 }}
-          {{  brannan = 1 }}
+        {{ if {collection:sponsors sponsor_type:contains='3'} | count > 1 }}
+            {{ brannan = true }}
         {{ /if }}
+        
             
         
 
-        <div class="flex {{ brannan ? flex-row : flex-col }}  justify-center px-4">
-            <div class="text-center">
-                
+        <div class="flex {{ brannan ? 'flex-row w-full items-center gap-4' : 'flex-col' }} justify-center px-4">
+            <div class="text-center ">
+                Sponsored by
             </div>
             {{ collection:sponsors sponsor_type:contains="3" sort="title"  }}
-                <div class="pb-4">
+                <div class="{{ brannan ? 'pb-0' : 'pb-4' }}">
                     <a href="http://{{ sponsor_website }}" target="_blank">
                         {{ logo }}
-                            <img src="{{ url }}" class="{{ brannan ? w-full : '' }} mx-auto" alt="">
+                            <img src="{{ url }}" class=" mx-auto {{ brannan ? 'h-24' : 'h-32' }}" alt="">
                         {{ /logo }}
                     </a>
                 </div>
