@@ -14,7 +14,7 @@ class Item extends Model
 
     public function gifts()
     {
-        return $this->belongsToMany(Gift::class)->withTimestamps();
+        return $this->belongsToMany(Gift::class);
     }
 
     public function category()
