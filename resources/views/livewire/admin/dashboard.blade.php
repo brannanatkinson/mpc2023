@@ -50,7 +50,7 @@
                     <div class=" col-span-2">{{ $host->name }}</div>
                     <div class="">${{ App\Models\Gift::where('user_id', '=', $host->id )->where('created_at', '>', date('Y').'-01-01')->sum('gift_total') }}</div>
                     <div class="">{{ App\Models\Gift::where('user_id', '=', $host->id )->where('created_at', '>', date('Y').'-01-01')->count() }}</div>
-                    <div class="">{{ $host->items->sum('pivot.item_quantity') }}</div>
+                    <div class="">{{ $host->items->sum('pivot.item_quantity')->where('pivot.created_at', '>', date('Y').'-01-01') }}</div>
                     @endforeach
                 </div>
             </div>
