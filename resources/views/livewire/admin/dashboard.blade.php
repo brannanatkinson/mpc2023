@@ -117,7 +117,7 @@
             Dashboard for {{ auth()->user()->name }}
         </x-slot>
         <div>
-            <div class="my-6 text-3xl text-center">Housing Hope @php echo date("Y") @endphp Dashboard for {{ auth()->user()->name }}</div>
+            <div class="my-6 text-3xl text-center">Housing Hope Dashboard for {{ auth()->user()->name }}</div>
             <div class="mb-10 text-center">
                 @php $user = auth()->user() @endphp
                 <a class="text-mp-coral" href="/hosts/{{ $user->host_url }}" target="_blank">View your public profile</a> | <a class="text-mp-coral" href="{{ route('admin.update.hosts') }}">Edit your profile</a>
@@ -168,25 +168,10 @@
                 </div>
                 @endif
             </div>
-            <!-- commented out items !-->
-            <!-- <div class="mt-10 max-w-5xl mx-auto">
-                <div class="my-3 text-3xl">Items Donated</div>
-                @if( $user->donatedItems()->count() > 0 )
-                <div class="mb-6 grid grid-cols-4 gap-6">
-                    @foreach ( $user->donatedItems() as $item )
-                    <div class="bg-white text-center flex flex-col rounded-md overflow-hidden">
-                        <div class="mb-6 w-full">
-                            <img src="{{ Storage::url( App\Models\Item::find( $item->id )->img ) }}" alt="" class="object-fit">
-                        </div>
-                        <div class="mb-8 text-3xl">{{ $item->quantity }}</div>
-                    </div>
-                    @endforeach
-                </div>
-                @endif
-            </div> !-->
+            
             <div class="mt-10 max-w-5xl mx-auto">
                 <div class="my-3 text-3xl">
-                    @php echo date("Y") @endphp Donor Summary
+                    Donor Summary
                 </div>
                 <div class="grid grid-cols-3 gap-8">
                     <div class="font-bold">Donor Name</div>
