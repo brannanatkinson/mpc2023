@@ -14,10 +14,10 @@ class Item extends Model
 
     public function gifts()
     {
-        return $this->belongsToMany(Gitt::class)->withTimestamps();
+        return $this->belongsToMany(Gift::class)->withTimestamps();
     }
 
-    public function category(){
+    public function category()
         return $this->belongsTo(Category::class);
     }
 
