@@ -15,7 +15,7 @@ class Host extends Model
 
     public function items()
     {
-        return $this->belongsToMany(Item::class)->withPivot(['item_quantity'])->withTimestamps();
+        return $this->belongsToMany(Item::class)->withPivot(['item_quantity'])->where('created_at', '>', date('Y').'-01-01');
     }
 
     public function totalDonationAmount()
