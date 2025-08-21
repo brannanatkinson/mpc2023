@@ -180,7 +180,7 @@
                     @foreach( App\Models\Gift::where('user_id', '=', auth()->user()->id )->where('created_at', '>', date('Y').'-01-01')->get() as $gift )
                     <div class="">{{ $gift->donor->full_name }}</div>
                     <div class="">${{ $gift->gift_total }} </div>
-                    <div class="">{{ $gift->items->sum('pivot.item_quantity') }}</div>
+                    <div class="">{{ $gift->items->where('created_at', '>', date('Y').'-01-01')->sum('pivot.item_quantity') }}</div>
                     @endforeach
                 </div>
             </div>
