@@ -51,6 +51,8 @@
                         </div> 
                         <br/>
                         {{ $host->email}}
+                        <br/>
+                        https://housinghopenashville.org/hosts/{{ $host->host_url }}
                     </div>
                     <div class="table-body-cell">
                         @if ( $host->campaigns->last()->year != date("Y") )
